@@ -1,11 +1,13 @@
 <script context="module">
+    import { base } from '$app/paths';
+
     export async function load () {
         let imports = import.meta.globEager('./../../posts/*/index.svx');
         let blog = Object.entries(imports);
 
         let posts = blog.map(([slug, { metadata }]) => ({
             metadata: metadata,
-            slug: `${slug.split('/').slice(-2)[0]}`
+            link: `${base}/blog/${slug.split('/').slice(-2)[0]}`
         }))
 
         return {
@@ -20,8 +22,8 @@
     export let posts;
 </script>
 
-{#each posts as {metadata, slug}}
-    <a sveltekit:prefetch href={ slug }>
+{#each posts as {metadata, link}}
+    <a sveltekit:prefetch href={ link }>
         <h1>{metadata.title}</h1>
         <h2>{metadata.description}</h2>
     </a>    
