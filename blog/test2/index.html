@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-a780b7a6.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-f8496567.js">
+		<link rel="modulepreload" href="/./_app/chunks/preload-helper-9f12a5fd.js">
+		<link rel="modulepreload" href="/./_app/layout.svelte-a6e53451.js">
+		<link rel="modulepreload" href="/./_app/pages/blog/[slug]/index.svelte-edac824e.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-a780b7a6.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/layout.svelte-a6e53451.js"),
+						import("/./_app/pages/blog/[slug]/index.svelte-edac824e.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/blog/test2",
+						query: new URLSearchParams(""),
+						params: {"slug":"test2"}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<h1>Test Post</h1>
+<h2>short description of post</h2>
+<h1>test</h1>
+<h2>short description of post</h2>
+<h1>Test Component</h1>
+
+
+
+	
+</div>
+	</body>
+</html>

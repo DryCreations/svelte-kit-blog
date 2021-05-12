@@ -1,0 +1,1 @@
+import{S as s,i as a,s as t,e as o,t as e,c as n,a as r,g as c,d as p,f,F as i,G as l}from"./vendor-f8496567.js";function m(s){let a,t;return{c(){a=o("h1"),t=e("Test Component")},l(s){a=n(s,"H1",{});var o=r(a);t=c(o,"Test Component"),o.forEach(p)},m(s,o){f(s,a,o),i(a,t)},p:l,i:l,o:l,d(s){s&&p(a)}}}class u extends s{constructor(s){super(),a(this,s,null,m,t,{})}}export{u as T};
