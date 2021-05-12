@@ -6,8 +6,11 @@ const config = {
 	kit: {
 		target: '#svelte',
 		adapter: adapter(),
-		vite: () => ({
+		paths: {
 			base: process.env.NODE_ENV === "development" ? '/' : '/svelte-kit-blog/'
+		},
+		vite: () => ({
+			// base: process.env.NODE_ENV === "development" ? '/' : '/svelte-kit-blog/'
 		})
 	},
 	preprocess: [
