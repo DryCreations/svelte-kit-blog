@@ -7,7 +7,9 @@ const config = {
 		target: '#svelte',
 		adapter: adapter(),
 		paths: {
-			base: process.env.NODE_ENV === "development" ? '/' : '/svelte-kit-blog/'
+			base: process.env.NODE_ENV === "development" ? '/' : '/svelte-kit-blog/',
+			assets: process.env.NODE_ENV === "development" ? '/' : '/svelte-kit-blog/'
+
 		},
 		vite: () => ({
 			// base: process.env.NODE_ENV === "development" ? '/' : '/svelte-kit-blog/'
