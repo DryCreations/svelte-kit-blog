@@ -1,0 +1,22 @@
+---
+title: Test Post
+description: short description of post
+date: 2021-05-12 05:21:00
+categories:
+- Education
+- Computer Science
+tags:
+- tutorial
+- svelte
+- svelte kit
+---
+
+# test
+
+## {description}
+
+<Test />
+
+<script>
+    import Test from '$lib/Test.svelte';
+</script>
