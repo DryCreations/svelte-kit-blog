@@ -5,7 +5,7 @@
 
         let posts = blog.map(([slug, { metadata }]) => ({
             metadata: metadata,
-            link: `/blog/${slug.split('/').slice(-2)[0]}`
+            slug: `${slug.split('/').slice(-2)[0]}`
         }))
 
         return {
@@ -20,8 +20,8 @@
     export let posts;
 </script>
 
-{#each posts as {metadata, link}}
-    <a sveltekit:prefetch href={link}>
+{#each posts as {metadata, slug}}
+    <a sveltekit:prefetch href={ slug }>
         <h1>{metadata.title}</h1>
         <h2>{metadata.description}</h2>
     </a>    
