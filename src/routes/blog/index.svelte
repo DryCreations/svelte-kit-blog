@@ -5,7 +5,7 @@
 
         let posts = blog.map(([slug, { metadata }]) => ({
             metadata: metadata,
-            link: `blog/${slug.split('/').slice(-2)[0]}`
+            link: `/blog/${slug.split('/').slice(-2)[0]}`
         }))
 
         return {
