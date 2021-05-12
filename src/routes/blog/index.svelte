@@ -8,7 +8,9 @@
         let posts = blog.map(([slug, { metadata }]) => ({
             metadata: metadata,
             link: `${base}/blog/${slug.split('/').slice(-2)[0]}`
-        }))
+        })).sort((a,b)=>{
+            return new Date(b.metadata.date) - new Date(a.metadata.date);
+        })
 
         return {
             props: {
@@ -22,7 +24,7 @@
     export let posts;
 </script>
 
-{#each posts as {metadata, link}}
+{#each posts as {metadata, link} (link)}
     <a sveltekit:prefetch href={ link }>
         <h1>{metadata.title}</h1>
         <h2>{metadata.description}</h2>

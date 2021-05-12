@@ -1,5 +1,5 @@
 ---
-title: Test Post
+title: Test Post Please Ignore
 description: short description of post
 date: 2021-05-12 05:21:00
 categories:
@@ -15,8 +15,14 @@ tags:
 
 ## {description}
 
+
+![test]({url})
+
 <Test />
 
 <script>
     import Test from '$lib/Test.svelte';
+    import url from './image.png';
+
+    console.log(url)
 </script>
