@@ -2,7 +2,7 @@
     import { base } from '$app/paths';
 
     export async function load () {
-        let imports = import.meta.globEager('./../../posts/*/index.svx');
+        let imports = import.meta.globEager('./../../posts/*/index.svelte.md');
         let blog = Object.entries(imports);
 
         let posts = blog.map(([slug, { metadata }]) => ({

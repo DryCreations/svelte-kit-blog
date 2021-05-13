@@ -23,6 +23,4 @@ tags:
 <script>
     import Test from '$lib/Test.svelte';
     import url from './image.png';
-
-    console.log(url)
 </script>

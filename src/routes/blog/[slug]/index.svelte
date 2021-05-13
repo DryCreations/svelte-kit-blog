@@ -1,6 +1,6 @@
 <script context="module">
     export async function load ({ page }) {
-        let {metadata, default: Component} = await import(`./../../../posts/${page.params.slug}/index.svx`)
+        let {metadata, default: Component} = await import(`./../../../posts/${page.params.slug}/index.svelte.md`)
 
         return {
             props: {

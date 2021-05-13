@@ -22,9 +22,9 @@ const config = {
 			},
 			postcss: true		
 		}),
-		mdsvex({ extensions: ['.svx']})
+		mdsvex({ extensions: ['.svelte.md']})
 	],
-	extensions: ['.svelte', '.svx'],
+	extensions: ['.svelte', '.svelte.md'],
 	
 };
 
