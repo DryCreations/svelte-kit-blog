@@ -19,7 +19,8 @@
     let {metadata, Component: Post} = post;
 </script>
 
-<h1>{metadata.title}</h1>
-<h2>{metadata.description}</h2>
-<Post />
+<article> 
+    <Post />
+</article>
+
 

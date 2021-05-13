@@ -9,7 +9,7 @@
     ]
   }
 </script>
-<div style="min-height: 200px;">
+<div style="min-height: 250px;">
 
 <footer class="text-gray-600 z-50 sm:absolute sm:bottom-0 sm:left-0 sm:right-0 container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <div class="text-center sm:text-left mt-4 sm:mt-0 sm:py-2">

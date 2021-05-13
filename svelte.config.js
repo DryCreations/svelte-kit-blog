@@ -23,7 +23,12 @@ const config = {
 			},
 			postcss: true		
 		}),
-		mdsvex({ extensions: ['.svelte.md']})
+		mdsvex({ 
+			extensions: ['.svelte.md'],
+			layout: {
+				_: "src/lib/Layouts/default.svelte"
+			}
+		})
 	],
 	extensions: ['.svelte', '.svelte.md'],
 	
