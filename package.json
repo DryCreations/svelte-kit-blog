@@ -1,10 +1,11 @@
 {
-  "name": "~TODO~",
+  "name": "svelte-kit-tailwind-mdsvex-blog",
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "preview": "svelte-kit preview"
+    "preview": "svelte-kit preview",
+    "a11y": "svelte-kit build && a11y 'build/**/*.html'"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.9",

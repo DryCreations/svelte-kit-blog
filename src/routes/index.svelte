@@ -2,5 +2,8 @@
     import {base} from '$app/paths'
 </script>
 
-<h1>Welcome to the blog template</h1>
+<svelte:head>
+    <title>Home</title>
+</svelte:head>
+
 <p>checkout <a href={`${base}/blog`}>/blog</a> to see posts</p>

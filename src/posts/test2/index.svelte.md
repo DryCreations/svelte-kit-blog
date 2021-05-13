@@ -20,5 +20,5 @@ tags:
 <h1 class="bg-red-200">test</h1>
 
 <script>
-    import Progress from '$lib/Progress.svelte';
+    import Progress from '$lib/Components/Progress.svelte';
 </script>

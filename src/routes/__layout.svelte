@@ -1,5 +1,8 @@
 <script>
-    import {base} from '$app/paths'
+    import {base} from '$app/paths';
+
+    import Footer from '$lib/Core/Footer.svelte';
+    import Header from '$lib/Core/Header.svelte';
 </script>
 
 <svelte:head>
@@ -12,4 +15,10 @@
     @tailwind utilities;
 </style>
 
-<slot></slot>
+<Header />
+
+<main>
+    <slot></slot>
+</main>
+
+<Footer />

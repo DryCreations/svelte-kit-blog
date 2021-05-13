@@ -21,6 +21,6 @@ tags:
 <Test />
 
 <script>
-    import Test from '$lib/Test.svelte';
+    import Test from '$lib/Components/Test.svelte';
     import url from './image.png';
 </script>
