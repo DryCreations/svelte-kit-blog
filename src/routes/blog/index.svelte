@@ -96,7 +96,7 @@ import { page } from '$app/stores';
 
 
 <section class="text-gray-600 body-font overflow-hidden">
-    <div class="container px-5 py-12 mx-auto">
+    <div class="container px-5 sm:py-24 py-5 mx-auto">
       <div class="-my-8 divide-y-2 divide-gray-100">
         {#each currentPage as {metadata, link} (link)}
             <div class="py-8 flex flex-wrap md:flex-nowrap">
@@ -134,7 +134,7 @@ import { page } from '$app/stores';
         {/if}
         
         {#each pagination as num (num)}
-            <button class:text-indigo-600="{num==currPage}" class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</button>
+            <button on:click="{() => { currPage = num }}" class:text-indigo-600="{num==currPage}" class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</button>
         {/each}
         {#if pagination[pagination.length - 1] < numPages - 1}
             <span class="flex items-center justify-center w-8 h-8 text-sm font-medium rounded dark:bg-violet-200 dark:text-violet-500">...</span>

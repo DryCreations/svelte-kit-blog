@@ -13,7 +13,8 @@ const config = {
 		paths: {
 			base: dev ? '' : '/svelte-kit-blog',
 			assets: dev ? '' : '/svelte-kit-blog'
-		}
+		},
+		trailingSlash: 'never'
 	},
 	preprocess: [
 		sveltePreprocess({
