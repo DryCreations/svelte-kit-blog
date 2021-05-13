@@ -84,6 +84,9 @@ import { page } from '$app/stores';
         scrollY = 0;
         scrollX = 0;
     }
+
+    $: prev = (currPage > 0);
+    $: next = (currPage < numPages - 1);
 </script>
 <svelte:window bind:scrollY={scrollY} bind:scrollX={scrollX} />
 
@@ -109,7 +112,7 @@ import { page } from '$app/stores';
             <div class="md:flex-grow">
                 <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{metadata.title}</h2>
                 <p class="leading-relaxed">{metadata.description}</p>
-                <a href={link} class="text-indigo-600 inline-flex items-center mt-4">Read Post
+                <a href={link} class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"></path>
                     <path d="M12 5l7 7-7 7"></path>
@@ -120,33 +123,29 @@ import { page } from '$app/stores';
         {/each}
         
       </div>
-      <div class="flex justify-center space-x-1 dark:text-coolGray-100 mt-12">
-        {#if currPage > 0}
-        <button on:click="{() => { currPage -= 1 }}" class="z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">
+      <div class="flex justify-center space-x-1 text-gray-500 mt-12">
+        <button disabled={!prev} on:click={() => { currPage -= 1 }} class:cursor-not-allowed={!prev} class:hover:text-gray-900={prev} class:text-gray-400={!prev} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                 <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>Prev
         </button>    
-        {/if}
-            
+
         {#if pagination[0] > 0}
             <span class="flex items-center justify-center w-8 h-8 text-sm font-medium rounded dark:bg-violet-200 dark:text-violet-500">...</span>
         {/if}
         
         {#each pagination as num (num)}
-            <button on:click="{() => { currPage = num }}" class:text-indigo-600="{num==currPage}" class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</button>
+            <button on:click="{() => { currPage = num }}" class:text-indigo-600="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</button>
         {/each}
         {#if pagination[pagination.length - 1] < numPages - 1}
             <span class="flex items-center justify-center w-8 h-8 text-sm font-medium rounded dark:bg-violet-200 dark:text-violet-500">...</span>
         {/if}
 
-        {#if currPage < numPages - 1}
-        <button on:click="{() => { currPage += 1 }}" class="z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">Next
+        <button disabled={!next} on:click={() => { currPage += 1 }} class:cursor-not-allowed={!next} class:hover:text-gray-900={next} class:text-gray-400={!next} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">Next
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
             </svg>
         </button>
-        {/if}
     </div>
     </div>
   </section>
