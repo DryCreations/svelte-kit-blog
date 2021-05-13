@@ -87,6 +87,10 @@ import { page } from '$app/stores';
 </script>
 <svelte:window bind:scrollY={scrollY} bind:scrollX={scrollX} />
 
+<svelte:head>
+    <title>Blog</title>
+    <meta name="description" content="Learn about Computer Science, K12 Education, and everything in between from Hayden Mankin." />
+</svelte:head>
 
 <!-- <textarea bind:value={query.search}></textarea> -->
 
@@ -105,7 +109,7 @@ import { page } from '$app/stores';
             <div class="md:flex-grow">
                 <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{metadata.title}</h2>
                 <p class="leading-relaxed">{metadata.description}</p>
-                <a href={link} class="text-indigo-500 inline-flex items-center mt-4">Read Post
+                <a href={link} class="text-indigo-600 inline-flex items-center mt-4">Read Post
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"></path>
                     <path d="M12 5l7 7-7 7"></path>
