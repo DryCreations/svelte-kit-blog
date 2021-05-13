@@ -1,6 +1,21 @@
 <script>
     import {base} from '$app/paths';
     import Head from '$lib/SVG/skribbli_head.svelte';
+
+    let page = {
+      name: 'Lorem Ipsum',
+      brief: [
+        'In Dictum Sollicitudin',
+        'B.S. Interdum Ullamcorper',
+        'Vestibulum Mattis',
+      ],
+      bio: [
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id aliquet enim. Suspendisse maximus in turpis quis tincidunt. Vestibulum vel lacus egestas, congue lectus nec, efficitur eros. Vestibulum nunc ex, viverra et egestas a, varius non metus. Nulla vitae velit mi. Nullam a arcu placerat, facilisis neque ac, convallis lorem. Quisque efficitur egestas nibh, sed bibendum tortor dignissim ut.',
+        'Aenean gravida nisi diam, quis semper eros cursus quis. Duis accumsan sed erat nec hendrerit. Sed fringilla orci ut magna ullamcorper imperdiet. Integer quis nibh eu lectus sagittis hendrerit nec at est. Pellentesque porta leo nunc, non pharetra libero semper sed. Vivamus molestie dui ut ipsum vestibulum, in porta odio viverra. Integer et mi tincidunt, sodales sem quis, fermentum neque. Morbi id ornare ipsum.',
+        'Nulla sed magna leo. Nullam vehicula ipsum magna, et facilisis lacus dictum eu. Sed et tristique ex. Cras ut lacus lorem. Quisque sed nulla pellentesque enim posuere feugiat. Donec laoreet fringilla finibus. Integer porta risus rutrum nibh accumsan convallis. Suspendisse lacinia turpis sit amet tristique ullamcorper. Aliquam erat volutpat. In iaculis tellus ac urna tincidunt scelerisque.'
+      ]
+    }
+    
 </script>
 
 <svelte:head>
@@ -18,18 +33,17 @@
               <Head />
             </div>
             <div class="flex flex-col items-center text-center justify-center">
-              <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Hayden Mankin</h2>
+              <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">{page.name}</h2>
               <div class="w-12 h-1 bg-indigo-600 rounded mt-2 mb-4"></div>
-              <p class="text-base">Wright State University 2018-Present</p>
-              <p class="text-base">B.A. Computer Science</p>
-              <p class="text-base">Minor in Mathematics</p>
-              <p class="text-base">Lic. PK-12 Computer Information Science</p>
+              {#each page.brief as brief}
+                <p class="text-base">{brief}</p>  
+              {/each}
             </div>
           </div>
           <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-            <p class="leading-relaxed text-lg mb-4">I'm a teacher... almost at least. I'm studying Computer Science and Education, planning on teaching K-12 graders about computer science. I am a senior at Wright State University preparing to begin student teaching, I'll be posting about a variety of things on this blog while I do that.</p>
-            <p class="leading-relaxed text-lg mb-4">Have you ever wondered what Computer Science education was like for younger kids? Or do you want some ideas for your own classroom? Or just want to hear about my experiences to get an idea of how my ideas go? Then you might want to stick around and read a few posts</p>
-            <p class="leading-relaxed text-lg mb-4">I won't just be posting about education, I do plan on posting about some things outside the realm of what I would teach a high schooler. I do love learning after all and I want a place to share whatever new thing I'm learning about any given week.</p>
+            {#each page.bio as bio}
+              <p class="leading-relaxed text-lg mb-4">{bio}</p>  
+            {/each}
             <a href="{base}/about" class="text-indigo-600 inline-flex items-center">More About Me
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
