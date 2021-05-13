@@ -14,11 +14,12 @@
     @tailwind components;
     @tailwind utilities;
 </style>
-
+<div class="relative min-h-screen">
 <Header />
 
-<main>
+<main class="container p-5 mx-auto flex-col flex">
     <slot></slot>
 </main>
 
 <Footer />
+</div>
