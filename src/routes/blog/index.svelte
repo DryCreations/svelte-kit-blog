@@ -25,7 +25,7 @@
 </script>
 
 {#each posts as {metadata, link} (link)}
-    <a sveltekit:prefetch href={ link }>
+    <a class="bg-red-50 my-8" sveltekit:prefetch href={ link }>
         <h1>{metadata.title}</h1>
         <h2>{metadata.description}</h2>
     </a>    

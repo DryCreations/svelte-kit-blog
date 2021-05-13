@@ -1,5 +1,7 @@
 import { mdsvex } from "mdsvex";
 import adapter from '@sveltejs/adapter-static';
+import sveltePreprocess from 'svelte-preprocess';
+
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -14,6 +16,12 @@ const config = {
 		}
 	},
 	preprocess: [
+		sveltePreprocess({
+			defaults: {
+				style: 'postcss'
+			},
+			postcss: true		
+		}),
 		mdsvex({ extensions: ['.svx']})
 	],
 	extensions: ['.svelte', '.svx'],
