@@ -12,7 +12,7 @@
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/preload-helper-9f12a5fd.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/paths-45dac81d.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/__layout.svelte-1172a441.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/about/index.svelte-04d937df.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-e787d05c.js">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/start-9aa571ba.css">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/__layout.svelte-5899ac52.css">
 
@@ -31,13 +31,13 @@
 					error: null,
 					nodes: [
 						import("/svelte-kit-blog/_app/pages/__layout.svelte-1172a441.js"),
-						import("/svelte-kit-blog/_app/pages/about/index.svelte-04d937df.js")
+						import("/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-e787d05c.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/about",
+						path: "/blog/page8",
 						query: new URLSearchParams(""),
-						params: {}
+						params: {"slug":"page8"}
 					}
 				}
 			});
@@ -55,7 +55,27 @@
         <a href="/svelte-kit-blog/about" class="mr-5 hover:text-gray-900">About</a>
         <a href="/svelte-kit-blog/blog" class="hover:text-gray-900">Blog</a></nav></header>
 
-<main class="container p-5 mx-auto flex-col flex"></main>
+<main class="container p-5 mx-auto flex-col flex"><h1>Progress Componedasdas</h1>
+<h2>showcase embedded components</h2>
+<h1>test</h1>
+<h2>showcase embedded components</h2>
+<progress class="block w-full" value="0"></progress>
+
+<button>0%
+</button>
+
+<button>25%
+</button>
+
+<button>50%
+</button>
+
+<button>75%
+</button>
+
+<button>100%
+</button>
+<h1 class="bg-red-200">test</h1></main>
 
 <div style="min-height: 200px;"><footer class="text-gray-600 z-50 sm:absolute sm:bottom-0 sm:left-0 sm:right-0 container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"><div class="text-center sm:text-left mt-4 sm:mt-0 sm:py-2"><p class="text-sm text-gray-500 ">© 2021 Designed by Hayden Mankin</p><p class="text-sm text-gray-500 ">Powered by Svelte Kit, Tailwind, and MDsveX</p></div>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"><a href="http://facebook.com/" class="text-gray-500"><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"><title>Facebook</title><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
