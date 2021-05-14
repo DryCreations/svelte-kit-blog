@@ -9,7 +9,7 @@
         } else {
             return {
                 status: 404,
-                error: 'Page Does Not Exist'
+                error: "I couldn't find that post"
             }
         }
 
