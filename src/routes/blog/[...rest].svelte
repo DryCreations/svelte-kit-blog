@@ -75,9 +75,6 @@
 
     $: pagination = [];
 
-    let scrollY = 0;
-    let scrollX = 0;
-
     $: {
         pagination = [...Array(numPages).keys()];
 
@@ -93,15 +90,11 @@
         }
 
         pagination = pagination.slice(min, max + 1);
-
-        scrollY = 0;
-        scrollX = 0;
     }
 
     $: prev = (currPage > 0);
     $: next = (currPage < numPages - 1);
 </script>
-<svelte:window bind:scrollY={scrollY} bind:scrollX={scrollX} />
 
 <svelte:head>
     <title>Blog</title>
