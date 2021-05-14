@@ -30,7 +30,8 @@
 
 
     onMount(async () => {
-        window.klipse.plugin.init(window.klipse_settings);
+        if (window.klipse)
+            window.klipse.plugin.init(window.klipse_settings);
     })
 </script>
 

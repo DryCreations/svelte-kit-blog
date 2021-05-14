@@ -19,6 +19,11 @@
     let {metadata, Component: Post} = post;
 </script>
 
+<svelte:head>
+    <title>{metadata.title}</title>
+    <meta name="description" content={metadata.description} />
+</svelte:head>
+
 <article> 
     <Post />
 </article>

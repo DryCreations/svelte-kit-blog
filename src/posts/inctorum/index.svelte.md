@@ -12,8 +12,6 @@ tags:
 
 ## Antiquus pridem caligine innuba sinusque liceret
 
-![alt]({imageURL})
-
 Lorem markdownum graves, cum sensit et nunc tenet, hac. Dabimus quaere quoque?
 Facies est avsis trahebat, sequerere nostri Leucosiamque mandat solet: atque
 verba, cupidusque maerens, summam. Deus precor moliturque illo Aesacon
