@@ -9,8 +9,8 @@
     ]
   }
 </script>
-<div style="min-height: 250px;">
-
+<div class="h-64"></div>
+<div  class="bottom-0 absolute sm:static">
 <footer class="text-gray-600 z-50 sm:absolute sm:bottom-0 sm:left-0 sm:right-0 container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <div class="text-center sm:text-left mt-4 sm:mt-0 sm:py-2">
     {#each page.text as text}

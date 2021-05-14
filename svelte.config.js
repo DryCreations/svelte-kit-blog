@@ -11,7 +11,8 @@ const getDirectories = source =>
     .map(dirent => dirent.name)
 
 const posts_dir = getDirectories('./src/posts').map(dir => `/blog/${dir}`);
-console.log(posts_dir);
+
+const pages = [...Array(Math.ceil(posts_dir.length / 8)).keys()].map(dir => `/blog/${dir}`);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -27,7 +28,7 @@ const config = {
 			crawl: true,
 			enabled: true,
 			force: false,
-			pages: ['*', ...posts_dir]
+			pages: ['*', ...posts_dir, ...pages]
 		},
 
 	},

@@ -1,14 +1,18 @@
 <script context="module">
     export async function load ({ page }) {
-        let {metadata, default: Component} = await import(`./../../../posts/${page.params.slug}/index.svelte.md`)
+        try {
+            let {metadata, default: Component} = await import(`./../../../posts/${page.params.slug}/index.svelte.md`)
 
-        return {
-            props: {
-                post: {
-                    metadata,
-                    Component
+            return {
+                props: {
+                    post: {
+                        metadata,
+                        Component
+                    }
                 }
             }
+        } catch {
+            return;
         }
     }
 </script>

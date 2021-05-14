@@ -1,7 +1,18 @@
 <script context="module">
     import { base } from '$app/paths';
 
-    export async function load ( { page: {query} } ) {
+    export async function load ( { page: {query, params} } ) {
+        let pageNum = 0;
+
+        if (!isNaN(params.rest)) {
+            pageNum = params.rest;
+        } else {
+            return {
+                status: 404,
+                error: 'Page Does Not Exist'
+            }
+        }
+
         let imports = import.meta.globEager('./../../posts/*/index.svelte.md');
         let blog = Object.entries(imports);
 
@@ -19,7 +30,7 @@
                     tags: query.getAll('tag'),
                     categories: query.getAll('category'),
                     search: query.get('search'),
-                    page: query.get('page')
+                    page: pageNum
                 }
             }
         }
@@ -28,6 +39,8 @@
 
 <script>
 import { page } from '$app/stores';
+import { goto, invalidate, prefetch, prefetchRoutes } from '$app/navigation';
+
 
     export let posts;
     export let query;
@@ -102,7 +115,7 @@ import { page } from '$app/stores';
     <div class="container px-5 sm:py-24 py-5 mx-auto">
       <div class="-my-8 divide-y-2 divide-gray-100">
         {#each currentPage as {metadata, link} (link)}
-            <div class="py-8 flex flex-wrap md:flex-nowrap">
+            <div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap">
             <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                 {#each metadata.categories as category}
                     <span class="font-semibold title-font text-gray-700">{category}</span>    
@@ -124,7 +137,7 @@ import { page } from '$app/stores';
         
       </div>
       <div class="flex justify-center space-x-1 text-gray-500 mt-12">
-        <button disabled={!prev} on:click={() => { currPage -= 1 }} class:cursor-not-allowed={!prev} class:hover:text-gray-900={prev} class:text-gray-400={!prev} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">
+        <button disabled={!prev} on:click={() => { currPage -= 1; goto(`${base}/blog/${currPage}`); }} class:cursor-not-allowed={!prev} class:hover:text-gray-900={prev} class:text-gray-400={!prev} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                 <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>Prev
@@ -135,13 +148,13 @@ import { page } from '$app/stores';
         {/if}
         
         {#each pagination as num (num)}
-            <button on:click="{() => { currPage = num }}" class:text-indigo-600="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</button>
+            <button on:click="{() => { currPage = num; goto(`${base}/blog/${currPage}`); }}" class:text-indigo-600="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</button>
         {/each}
         {#if pagination[pagination.length - 1] < numPages - 1}
             <span class="flex items-center justify-center w-8 h-8 text-sm font-medium rounded dark:bg-violet-200 dark:text-violet-500">...</span>
         {/if}
 
-        <button disabled={!next} on:click={() => { currPage += 1 }} class:cursor-not-allowed={!next} class:hover:text-gray-900={next} class:text-gray-400={!next} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">Next
+        <button disabled={!next} on:click={() => { currPage += 1; goto(`${base}/blog/${currPage}`); }} class:cursor-not-allowed={!next} class:hover:text-gray-900={next} class:text-gray-400={!next} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">Next
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
             </svg>
