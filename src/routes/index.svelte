@@ -18,7 +18,7 @@
 
 <svelte:head>
     <title>Home</title>
-    <meta name="description" content="Learn about Computer Science, K12 Education, and everything in between from Hayden Mankin." />
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed ante et nunc iaculis elementum non quis augue. Vestibulum tellus enim, ultricies at congue quis, lobortis eget tellus. Etiam nulla ipsum, volutpat sit amet laoreet ultricies, scelerisque non est. Integer vitae laoreet arcu, eu mollis risus. Duis a est vitae lectus ullamcorper mollis. Morbi elementum, enim cursus sagittis bibendum, leo nisl posuere urna, quis finibus risus velit a nibh. In a turpis cursus, congue est non, sodales arcu. Nam vulputate quam vel risus rutrum, id porttitor nunc imperdiet. Nunc sapien ligula, rutrum nec euismod vel, consequat sit amet erat. Proin mollis viverra ante vel porttitor. Ut ex sapien, consectetur sed." />
 
 </svelte:head>
 
@@ -42,7 +42,7 @@
             {#each page.bio as bio}
               <p class="leading-relaxed text-lg mb-4">{bio}</p>  
             {/each}
-            <a href="{base}/about" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center">More About Me
+            <a href="{base}/about/" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center">More About Me
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>

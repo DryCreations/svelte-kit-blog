@@ -23,7 +23,7 @@ const config = {
 			base: dev ? '' : '/svelte-kit-blog',
 			assets: dev ? '' : '/svelte-kit-blog'
 		},
-		trailingSlash: 'never',
+		trailingSlash: 'always',
 		prerender: {
 			crawl: true,
 			enabled: true,

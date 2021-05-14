@@ -4,8 +4,10 @@
     export async function load ( { page: {query, params} } ) {
         let pageNum = 0;
 
-        if (!isNaN(params.rest)) {
-            pageNum = params.rest;
+        let rest = params.rest.split('/');
+
+        if (!isNaN(rest[0]) && !rest[1]) {
+            pageNum = rest[0];
         } else {
             return {
                 status: 404,
@@ -18,7 +20,7 @@
 
         let posts = blog.map(([slug, { metadata }]) => ({
             metadata: metadata,
-            link: `${base}/blog/${slug.split('/').slice(-2)[0]}`
+            link: `${base}/blog/${slug.split('/').slice(-2)[0]}/`
         })).sort((a,b)=>{
             return new Date(b.metadata.date) - new Date(a.metadata.date);
         })
@@ -44,7 +46,7 @@
     export let query;
 
     export let perPage = 8;
-    $: currPage = query.page || ($params)?.rest || 0;
+    $: currPage = query.page || ($params)?.rest.split('/')[0] || 0;
 
     $: filteredPosts = posts.filter((o) => {
         let flag = false;
@@ -135,7 +137,7 @@
         
       </div>
       <div class="flex justify-center space-x-1 text-gray-500 mt-12">
-        <a href="{base}/blog/{currPage - 1}" disabled={!prev} class:cursor-not-allowed={!prev} class:hover:text-gray-900={prev} class:text-gray-400={!prev} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">
+        <a href="{base}/blog/{currPage - 1}/" disabled={!prev} class:cursor-not-allowed={!prev} class:hover:text-gray-900={prev} class:text-gray-400={!prev} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                 <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>Prev
@@ -146,13 +148,13 @@
         {/if}
         
         {#each pagination as num (num)}
-            <a href="{base}/blog/{num}" class:text-indigo-600="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</a>
+            <a href="{base}/blog/{num}/" class:text-indigo-600="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</a>
         {/each}
         {#if pagination[pagination.length - 1] < numPages - 1}
             <span class="flex items-center justify-center w-8 h-8 text-sm font-medium rounded dark:bg-violet-200 dark:text-violet-500">...</span>
         {/if}
 
-        <a href="{base}/blog/{currPage + 1}" disabled={!next} class:cursor-not-allowed={!next} class:hover:text-gray-900={next} class:text-gray-400={!next} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">Next
+        <a href="{base}/blog/{currPage + 1}/" disabled={!next} class:cursor-not-allowed={!next} class:hover:text-gray-900={next} class:text-gray-400={!next} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">Next
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                 <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
             </svg>
