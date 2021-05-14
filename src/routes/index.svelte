@@ -11,8 +11,6 @@
       ],
       bio: [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id aliquet enim. Suspendisse maximus in turpis quis tincidunt. Vestibulum vel lacus egestas, congue lectus nec, efficitur eros. Vestibulum nunc ex, viverra et egestas a, varius non metus. Nulla vitae velit mi. Nullam a arcu placerat, facilisis neque ac, convallis lorem. Quisque efficitur egestas nibh, sed bibendum tortor dignissim ut.',
-        'Aenean gravida nisi diam, quis semper eros cursus quis. Duis accumsan sed erat nec hendrerit. Sed fringilla orci ut magna ullamcorper imperdiet. Integer quis nibh eu lectus sagittis hendrerit nec at est. Pellentesque porta leo nunc, non pharetra libero semper sed. Vivamus molestie dui ut ipsum vestibulum, in porta odio viverra. Integer et mi tincidunt, sodales sem quis, fermentum neque. Morbi id ornare ipsum.',
-        'Nulla sed magna leo. Nullam vehicula ipsum magna, et facilisis lacus dictum eu. Sed et tristique ex. Cras ut lacus lorem. Quisque sed nulla pellentesque enim posuere feugiat. Donec laoreet fringilla finibus. Integer porta risus rutrum nibh accumsan convallis. Suspendisse lacinia turpis sit amet tristique ullamcorper. Aliquam erat volutpat. In iaculis tellus ac urna tincidunt scelerisque.'
       ]
     }
     

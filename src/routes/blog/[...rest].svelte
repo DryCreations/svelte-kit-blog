@@ -115,7 +115,7 @@ import { goto, invalidate, prefetch, prefetchRoutes } from '$app/navigation';
     <div class="container px-5 sm:py-24 py-5 mx-auto">
       <div class="-my-8 divide-y-2 divide-gray-100">
         {#each currentPage as {metadata, link} (link)}
-            <div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap">
+            <div class="py-8 flex flex-col md:flex-row flex-wrap md:flex-nowrap">
             <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                 {#each metadata.categories as category}
                     <span class="font-semibold title-font text-gray-700">{category}</span>    
