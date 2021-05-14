@@ -31,10 +31,13 @@
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
       <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-        <h1 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+        <h1 class="max-w-lg mb-6 md:mx-auto">
             About
         </h1>
-        <p class="text-base text-gray-700 md:text-lg">
+        <p class="">
+            {#each blurb as i}
+                {i}
+            {/each}
         </p>
       </div>
     </div>
@@ -43,11 +46,11 @@
         <div class="space-y-8">
             {#each bio_left as i}
                  <div>
-                    <p class="mb-4 text-xl font-medium">
+                    <p class="mb-4">
                         {i[0]}
                     </p>
                     {#each i.slice(1) as j}
-                        <p class="text-gray-700 mb-2">
+                        <p class="mb-2">
                             {j}
                         </p>
                     {/each}
@@ -57,11 +60,11 @@
         <div class="space-y-8">
             {#each bio_right as i}
             <div>
-               <p class="mb-4 text-xl font-medium">
+               <p class="mb-4">
                    {i[0]}
                </p>
                {#each i.slice(1) as j}
-                   <p class="text-gray-700">
+                   <p class="">
                        {j}
                    </p>
                {/each}

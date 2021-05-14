@@ -1,1 +1,1 @@
-<ol class="list-decimal list-inside m-4"><slot></slot></ol>
+<ol class="list-decimal list-inside"><slot></slot></ol>

@@ -94,6 +94,8 @@
 
     $: prev = (currPage > 0);
     $: next = (currPage < numPages - 1);
+
+    import Arrow from '$lib/SVG/Arrow.svelte';
 </script>
 
 <svelte:head>
@@ -104,53 +106,46 @@
 <!-- <textarea bind:value={query.search}></textarea> -->
 
 
-<section class="text-gray-600 body-font overflow-hidden">
+<section class="overflow-hidden">
     <div class="container px-5 sm:py-24 py-5 mx-auto">
-      <div class="-my-8 divide-y-2 divide-gray-100">
+      <div class="my-8 divide-y-2 divide-gray-100">
         {#each currentPage as {metadata, link} (link)}
             <div class="py-8 flex flex-col md:flex-row flex-wrap md:flex-nowrap">
             <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                 {#each metadata.categories as category}
-                    <span class="font-semibold title-font text-gray-700">{category}</span>    
+                    <span class="">{category}</span>    
                 {/each}
-                <span class="mt-1 text-gray-500 text-sm">{new Date(metadata.date).toDateString()}</span>
+                <span class="mt-1">{new Date(metadata.date).toDateString()}</span>
             </div>
             <div class="md:flex-grow">
-                <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{metadata.title}</h2>
-                <p class="leading-relaxed">{metadata.description}</p>
-                <a href={link} class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                </svg>
+                <h2 class=" mb-2">{metadata.title}</h2>
+                <p class="">{metadata.description}</p>
+                <a href={link} class="inline-flex items-center mt-4">Read Post
+                <span class="ml-2"><Arrow title="Read Post" direction="right" /></span>
                 </a>
             </div>
             </div>
         {/each}
         
       </div>
-      <div class="flex justify-center space-x-1 text-gray-500 mt-12">
-        <a href="{base}/blog/{currPage - 1}/" disabled={!prev} class:cursor-not-allowed={!prev} class:hover:text-gray-900={prev} class:text-gray-400={!prev} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>Prev
+      <div class="flex justify-center space-x-1 mt-12">
+        <a href="{base}/blog/{currPage - 1}/" disabled={!prev} class:cursor-not-allowed={!prev} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
+            <Arrow title={"previous page"} direction={"left"} />
         </a>    
 
         {#if pagination[0] > 0}
-            <span class="flex items-center justify-center w-8 h-8 text-sm font-medium rounded dark:bg-violet-200 dark:text-violet-500">...</span>
+            <span class="flex items-center justify-center w-8 h-8 rounded">...</span>
         {/if}
         
         {#each pagination as num (num)}
             <a href="{base}/blog/{num}/" class:text-indigo-600="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</a>
         {/each}
         {#if pagination[pagination.length - 1] < numPages - 1}
-            <span class="flex items-center justify-center w-8 h-8 text-sm font-medium rounded dark:bg-violet-200 dark:text-violet-500">...</span>
+            <span class="flex items-center justify-center w-8 h-8 rounded">...</span>
         {/if}
 
-        <a href="{base}/blog/{currPage + 1}/" disabled={!next} class:cursor-not-allowed={!next} class:hover:text-gray-900={next} class:text-gray-400={!next} class=" z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded">Next
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-            </svg>
+        <a href="{base}/blog/{currPage + 1}/" disabled={!next} class:cursor-not-allowed={!next} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
+            <Arrow title={"next page"} direction={"right"} />
         </a>
     </div>
     </div>

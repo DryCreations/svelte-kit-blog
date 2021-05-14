@@ -14,6 +14,7 @@
       ]
     }
     
+    import Arrow from '$lib/SVG/Arrow.svelte';
 </script>
 
 <svelte:head>
@@ -22,30 +23,28 @@
 
 </svelte:head>
 
-<section class="text-gray-600">
+<section class="">
     <div class="container px-5 py-12 mx-auto flex flex-col">
       <div class="lg:w-4/6 mx-auto">
-        <div class="flex  flex-col sm:flex-row">
+        <div class="flex flex-col divide-y-2 sm:divide-x-2 sm:divide-y-0 divide-gray-100 sm:flex-row">
           <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-            <div class="w-24 h-24 inline-flex items-center justify-center text-gray-900">
+            <div class="w-24 h-24 inline-flex items-center justify-center">
               <Head />
             </div>
             <div class="flex flex-col items-center text-center justify-center">
-              <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">{page.name}</h2>
+              <h2 class="mt-4">{page.name}</h2>
               <div class="w-12 h-0.5 bg-indigo-600 mt-2 mb-2"></div>
               {#each page.brief as brief}
-                <p class="text-base">{brief}</p>  
+                <p class="">{brief}</p>  
               {/each}
             </div>
           </div>
-          <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+          <div class="sm:w-2/3 sm:pl-8 sm:py-8 mt-4 pt-4 sm:mt-0 text-center sm:text-left">
             {#each page.bio as bio}
-              <p class="leading-relaxed text-lg mb-4">{bio}</p>  
+              <p class="mb-4">{bio}</p>  
             {/each}
-            <a href="{base}/about/" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center">More About Me
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
+            <a href="{base}/about/" class="inline-flex items-center">More About Me
+              <span class="ml-2"><Arrow title="Read Post" direction="right" /></span>
             </a>
           </div>
         </div>

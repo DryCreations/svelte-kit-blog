@@ -1,1 +1,1 @@
-<ul class="list-disc list-inside m-4"><slot></slot></ul>
+<ul class="list-disc list-inside"><slot></slot></ul>
