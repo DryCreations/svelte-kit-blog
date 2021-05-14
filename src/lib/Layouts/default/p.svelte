@@ -1,1 +1,1 @@
-<p><slot></slot></p>
+<p class="text-base leading-relaxed mt-0 mb-4 "><slot></slot></p>

@@ -42,15 +42,26 @@ Deficeret adveniens inque inponit utque servavit continet sanguinis primordia
 arma? Mediis mota calamis mihi fertur in refer creatis, me. In dat domosque
 pererrato nam huius viribus domoque frena eo, pedes. Nefas amantes erat.
 
-```js
-if (cold_mamp(drive_play)) {
-    romIsdnDesktop(bcc(hypertext, hyperlinkExtranet));
-} else {
-    basic_ivr(3);
+```eval-js
+let a = 1;
+let b = 1;
+
+let f = (test) => {
+	console.log(test);  
 }
-tag.nosql_backlink_usb += alignment_ddr / 64 + intellectual(312622);
-ddr.odbcGoogle = -3;
-ddl.clickPush = software(hdd + cable, and_scsi_mouse * sata, 5 * 4) + wizard;
+
+f(5);
+```
+
+```js
+let a = 1;
+let b = 1;
+
+let f = (test) => {
+	console.log(test);  
+}
+
+f(5);
 ```
 
 *Videbor* furta longo quam scrobibus obscurus borean! Et age Troiana suos iniqui

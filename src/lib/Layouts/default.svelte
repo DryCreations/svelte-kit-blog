@@ -5,7 +5,7 @@
              em, strong,
              blockquote,
              a,
-             code,
+             code, pre,
              img } from './default/components.js';
     export { h1, h2, h3, h4, h5, h6,
              p,
@@ -13,14 +13,25 @@
              em, strong,
              blockquote,
              a,
-             code,
+             code, pre,
              img };
-             
+
+
+</script>  
+
+<script>
+    import { onMount, tick } from 'svelte';
+
     export let title;
     export let description;
     export let date;
     export let categories;
     export let tags;
-</script>  
+
+
+    onMount(async () => {
+        window.klipse.plugin.init(window.klipse_settings);
+    })
+</script>
 
 <slot></slot>

@@ -22,5 +22,3 @@
 <article> 
     <Post />
 </article>
-
-
