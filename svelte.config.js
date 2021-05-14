@@ -1,9 +1,17 @@
 import { mdsvex } from "mdsvex";
 import adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
-
+import fs from 'fs'
 
 const dev = process.env.NODE_ENV === 'development';
+
+const getDirectories = source =>
+  fs.readdirSync(source, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name)
+
+const posts_dir = getDirectories('./src/posts').map(dir => `/blog/${dir}`);
+console.log(posts_dir);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,7 +22,14 @@ const config = {
 			base: dev ? '' : '/svelte-kit-blog',
 			assets: dev ? '' : '/svelte-kit-blog'
 		},
-		trailingSlash: 'never'
+		trailingSlash: 'never',
+		prerender: {
+			crawl: true,
+			enabled: true,
+			force: false,
+			pages: ['*', ...posts_dir]
+		},
+
 	},
 	preprocess: [
 		sveltePreprocess({

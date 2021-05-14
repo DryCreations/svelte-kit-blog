@@ -1,4 +1,4 @@
-<script context="module">
+<!-- <script context="module">
     import { base } from '$app/paths';
 
     export async function load ( { page: {query} } ) {
@@ -39,4 +39,4 @@ import { page } from '$app/stores';
 
 {#each posts as {metadata, link} (link)}
     <p class="text-gray-500 text-sm">{new Date(metadata.date).toDateString()}<a href={link} class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4 ml-4">{metadata.title}</a></p>
-{/each}
+{/each} -->
