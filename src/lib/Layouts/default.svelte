@@ -5,14 +5,16 @@
              em, strong,
              blockquote,
              a,
-             img } from './default/components.js';
+             img,
+             code } from './default/components.js';
     export { h1, h2, h3, h4, h5, h6,
              p,
              ul, ol, li,
              em, strong,
              blockquote,
              a,
-             img };
+             img,
+             code  };
 
 
 </script>  

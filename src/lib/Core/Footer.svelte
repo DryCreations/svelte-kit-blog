@@ -10,14 +10,14 @@
   }
 </script>
 <div class="h-96"></div>
-<div  class="bottom-0 absolute sm:static">
-<footer class="text-gray-600 z-50 sm:absolute sm:bottom-0 sm:left-0 sm:right-0 container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    <div class="text-center sm:text-left mt-4 sm:mt-0 sm:py-2">
+<div  class="bottom-0 absolute lg:static">
+<footer class="text-gray-600 z-50 lg:absolute lg:bottom-0 lg:left-0 lg:right-0 container px-5 py-8 mx-auto flex items-center lg:flex-row flex-col">
+    <div class="text-center lg:text-left mt-4 lg:mt-0 lg:py-2">
     {#each page.text as text}
-      <p class="text-sm text-gray-500 ">{text}</p>
+      <p class="text-lg text-gray-500 ">{text}</p>
     {/each}
     </div>
-    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+    <span class="inline-flex lg:ml-auto lg:mt-0 mt-4 justify-center lg:justify-start">
       <a href="http://facebook.com/" class="text-gray-500 hover:text-gray-900">
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
           <title>Facebook</title>
@@ -46,7 +46,7 @@
       </a>
     </span>
 </footer>
-<div class="z-0 relative sm:absolute bottom-0 left-0 right-0 h-64 text-gray-900">
+<div class="z-0 relative lg:absolute bottom-0 left-0 right-0 h-64 text-gray-900">
   <Hero />
 </div>
 </div>

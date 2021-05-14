@@ -1,0 +1,1 @@
+<code class="text-indigo-100 bg-gray-700 p-1 rounded-md"><slot></slot></code>
