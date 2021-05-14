@@ -83,18 +83,18 @@ color:#f8f8f2;
 }
 
 .cm-s-default .cm-keyword,.cm-s-default .cm-atom,.cm-s-default .cm-number,.cm-s-default .cm-property,.cm-s-default .cm-operator {
-color:#A1A1FF;
+color:#90b4fe;
 }
 
 .cm-s-default .cm-variable,.cm-s-default .cm-punctuation,.cm-s-default .cm-property,.cm-s-default .cm-operator,.cm-s-default .cm-variable-2,.cm-s-default .cm-variable-3,.cm-s-default .cm-link {
 color:#00e0e0;
 }
 
-.cm-s-default .cm-comment,.cm-s-default .CodeMirror-linenumber {
+.cm-s-default .CodeMirror-linenumber {
 color:#555;
 }
 
-.cm-s-default .cm-string-2,.cm-s-default .cm-builtin,.cm-s-default .cm-attribute {
+.cm-s-default .cm-comment, .cm-s-default .cm-string-2,.cm-s-default .cm-builtin,.cm-s-default .cm-attribute {
 color:#abe338;
 }
 
