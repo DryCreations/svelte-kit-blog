@@ -14,10 +14,12 @@
     "mdsvex": "^0.9.5",
     "postcss-load-config": "^3.0.1",
     "svelte": "^3.34.0",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.1.2",
+    "svelte-preprocess": "^4.7.3"
+
   },
   "type": "module",
   "dependencies": {
-    "svelte-preprocess": "^4.7.3"
+    
   }
 }
