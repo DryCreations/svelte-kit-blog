@@ -10,21 +10,40 @@
 		</script>
 		<link rel="preload" href="https://viebel.github.io/klipse/fonts/FiraCode/woff2/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin> 
 
-		<link rel="icon" href="/svelte-kit-blog/favicon.ico" data-svelte="svelte-13ywgbb">
+		<title>Blog</title><link rel="icon" href="/svelte-kit-blog/favicon.ico" data-svelte="svelte-13ywgbb"><meta name="description" content="Learn about Computer Science, K12 Education, and everything in between from Hayden Mankin." data-svelte="svelte-1gqn2s1">
 
 		
 
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/start-20a435f7.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/vendor-e9121467.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/start-1c5deb1c.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/vendor-4740ffdf.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/preload-helper-9f12a5fd.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/singletons-bb9012b7.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/paths-45dac81d.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/__layout.svelte-28d5cd3f.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/feed/index.svelte-56ab64b6.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/__layout.svelte-13017fa6.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/blog/[...rest].svelte-11121ef0.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-21627dca.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/default-ed86e5f7.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/em-617433ea.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-17f72764.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-dd60e0a6.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-2e66fcc2.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-a30bb50b.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-889c25ff.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-50c2f9a5.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-9f76cea9.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-590c4033.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-df2a52ef.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-f727eb2e.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-a7db3b12.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-2d2e5e39.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-d84af2e8.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/index.svelte-8ca36d14.js">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/start-9aa571ba.css">
-		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/__layout.svelte-e8754268.css">
+		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/__layout.svelte-85c2b613.css">
+		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/default-6f834536.css">
 
 		<script type="module">
-			import { start } from "/svelte-kit-blog/_app/start-20a435f7.js";
+			import { start } from "/svelte-kit-blog/_app/start-1c5deb1c.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/svelte-kit-blog","assets":"/svelte-kit-blog"},
@@ -37,14 +56,14 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/svelte-kit-blog/_app/pages/__layout.svelte-28d5cd3f.js"),
-						import("/svelte-kit-blog/_app/pages/feed/index.svelte-56ab64b6.js")
+						import("/svelte-kit-blog/_app/pages/__layout.svelte-13017fa6.js"),
+						import("/svelte-kit-blog/_app/pages/blog/[...rest].svelte-11121ef0.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/feed",
+						path: "/blog/0",
 						query: new URLSearchParams(""),
-						params: {}
+						params: {"rest":"0"}
 					}
 				}
 			});
@@ -62,9 +81,83 @@
         <a href="/svelte-kit-blog/about" class="border-indigo-600 mr-5 hover:text-gray-900">About</a>
         <a href="/svelte-kit-blog/blog" class="border-indigo-600 hover:text-gray-900">Blog</a></nav></header>
 
-<main class="container p-5 mx-auto flex-col flex"></main>
+<main class="container p-5 mx-auto flex-col flex">
 
-<div style="min-height: 250px;"><footer class="text-gray-600 z-50 sm:absolute sm:bottom-0 sm:left-0 sm:right-0 container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"><div class="text-center sm:text-left mt-4 sm:mt-0 sm:py-2"><p class="text-sm text-gray-500 ">© 2021 Designed by Hayden Mankin</p><p class="text-sm text-gray-500 ">Powered by Svelte Kit, Tailwind, and MDsveX</p></div>
+
+
+
+
+
+<section class="text-gray-600 body-font overflow-hidden"><div class="container px-5 sm:py-24 py-5 mx-auto"><div class="-my-8 divide-y-2 divide-gray-100"><div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap"><div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col"><span class="font-semibold title-font text-gray-700">Lorem Ipsum</span>
+                <span class="mt-1 text-gray-500 text-sm">Thu May 13 2021</span></div>
+            <div class="md:flex-grow"><h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Iunctorum ignarus Dymantida instabilis fetum mane fuerat</h2>
+                <p class="leading-relaxed">Lorem markdownum graves, cum sensit et nunc tenet, hac. Dabimus quaere quoque?</p>
+                <a href="/svelte-kit-blog/blog/inctorum" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a></div>
+            </div><div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap"><div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col"><span class="font-semibold title-font text-gray-700">Lorem Ipsum</span>
+                <span class="mt-1 text-gray-500 text-sm">Wed May 12 2021</span></div>
+            <div class="md:flex-grow"><h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Tori non in raptamque</h2>
+                <p class="leading-relaxed">Suspendisse tristique ex nec facilisis interdum. Praesent id sagittis quam, quis tristique libero. Proin molestie diam consectetur neque hendrerit iaculis. Praesent commodo et mauris eu maximus. Mauris sed eros congue, ornare turpis sed, aliquam lacus. Cras in ornare felis, ac dignissim augue. Vivamus venenatis tellus non odio viverra scelerisque.</p>
+                <a href="/svelte-kit-blog/blog/tori-non-in-rapamque" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a></div>
+            </div><div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap"><div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col"><span class="font-semibold title-font text-gray-700">Lorem Ipsum</span>
+                <span class="mt-1 text-gray-500 text-sm">Tue May 11 2021</span></div>
+            <div class="md:flex-grow"><h2 class="text-2xl font-medium text-gray-900 title-font mb-2">title</h2>
+                <p class="leading-relaxed">description</p>
+                <a href="/svelte-kit-blog/blog/post-1" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a></div>
+            </div><div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap"><div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col"><span class="font-semibold title-font text-gray-700">Lorem Ipsum</span>
+                <span class="mt-1 text-gray-500 text-sm">Mon May 10 2021</span></div>
+            <div class="md:flex-grow"><h2 class="text-2xl font-medium text-gray-900 title-font mb-2">title</h2>
+                <p class="leading-relaxed">description</p>
+                <a href="/svelte-kit-blog/blog/post-2" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a></div>
+            </div><div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap"><div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col"><span class="font-semibold title-font text-gray-700">Lorem Ipsum</span>
+                <span class="mt-1 text-gray-500 text-sm">Sun May 09 2021</span></div>
+            <div class="md:flex-grow"><h2 class="text-2xl font-medium text-gray-900 title-font mb-2">title</h2>
+                <p class="leading-relaxed">description</p>
+                <a href="/svelte-kit-blog/blog/post-3" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a></div>
+            </div><div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap"><div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col"><span class="font-semibold title-font text-gray-700">Lorem Ipsum</span>
+                <span class="mt-1 text-gray-500 text-sm">Sat May 08 2021</span></div>
+            <div class="md:flex-grow"><h2 class="text-2xl font-medium text-gray-900 title-font mb-2">title</h2>
+                <p class="leading-relaxed">description</p>
+                <a href="/svelte-kit-blog/blog/post-4" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a></div>
+            </div><div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap"><div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col"><span class="font-semibold title-font text-gray-700">Lorem Ipsum</span>
+                <span class="mt-1 text-gray-500 text-sm">Fri May 07 2021</span></div>
+            <div class="md:flex-grow"><h2 class="text-2xl font-medium text-gray-900 title-font mb-2">title</h2>
+                <p class="leading-relaxed">description</p>
+                <a href="/svelte-kit-blog/blog/post-5" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a></div>
+            </div><div class="py-8 flex flex-col sm:flex-row flex-wrap md:flex-nowrap"><div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col"><span class="font-semibold title-font text-gray-700">Lorem Ipsum</span>
+                <span class="mt-1 text-gray-500 text-sm">Thu May 06 2021</span></div>
+            <div class="md:flex-grow"><h2 class="text-2xl font-medium text-gray-900 title-font mb-2">title</h2>
+                <p class="leading-relaxed">description</p>
+                <a href="/svelte-kit-blog/blog/post-6" class="text-indigo-600 hover:text-indigo-900 inline-flex items-center mt-4">Read Post
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                </a></div>
+            </div></div>
+      <div class="flex justify-center space-x-1 text-gray-500 mt-12"><button disabled class="z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded cursor-not-allowed  text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Prev
+        </button>    
+
+        
+        
+        <button class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500 text-indigo-600  border-t-2">0</button><button class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500  hover:text-gray-900">1</button>
+        
+
+        <button  class="z-50 flex items-center justify-center h-8 px-2 text-sm font-medium rounded  hover:text-gray-900">Next
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button></div></div></section></main>
+
+<div class="h-64"></div>
+<div class="bottom-0 absolute sm:static"><footer class="text-gray-600 z-50 sm:absolute sm:bottom-0 sm:left-0 sm:right-0 container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"><div class="text-center sm:text-left mt-4 sm:mt-0 sm:py-2"><p class="text-sm text-gray-500 ">© 2021 Designed by Hayden Mankin</p><p class="text-sm text-gray-500 ">Powered by Svelte Kit, Tailwind, and MDsveX</p></div>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"><a href="http://facebook.com/" class="text-gray-500 hover:text-gray-900"><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"><title>Facebook</title><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
       <a href="http://twitter.com/" class="ml-3 text-gray-500 hover:text-gray-900"><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"><title>Twitter</title><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg></a>
       <a href="http://instagram.com/" class="ml-3 text-gray-500 hover:text-gray-900"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24"><title>Instagram</title><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path></svg></a>
