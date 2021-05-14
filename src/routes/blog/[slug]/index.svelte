@@ -18,6 +18,9 @@
 </script>
 
 <script>
+
+import { base } from '$app/paths';
+
     export let post;
 
     let {metadata, Component: Post} = post;
@@ -26,6 +29,7 @@
 <svelte:head>
     <title>{metadata.title}</title>
     <meta name="description" content={metadata.description} />
+    <link rel="stylesheet" href="{base}/code.css" />
 </svelte:head>
 
 <article> 
