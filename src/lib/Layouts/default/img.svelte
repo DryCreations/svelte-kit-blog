@@ -4,5 +4,5 @@
 </script>
 
 <div>
-    <img {src} {alt} />
+    <img {src} {alt} class=" mt-8 mb-8" />
 </div>

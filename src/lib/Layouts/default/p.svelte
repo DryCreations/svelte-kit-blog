@@ -1,1 +1,1 @@
-<p class=""><slot></slot></p>
+<p class=" mt-5 mb-5"><slot></slot></p>

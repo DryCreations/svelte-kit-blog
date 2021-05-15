@@ -3,10 +3,11 @@ module.exports = {
   mode: 'jit',
   darkMode: 'media',
   theme: {
-    extend: {},
+    extend: {
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
   plugins: [],
 }

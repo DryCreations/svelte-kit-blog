@@ -1,0 +1,1 @@
+<thead class="font-semibold border-b-2 dark:border-gray-800 border-gray-100"><slot></slot></thead>

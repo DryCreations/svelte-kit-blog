@@ -1,20 +1,26 @@
 <script context="module">
-    import { h1, h2, h3, h4, h5, h6,
-             p,
-             ul, ol, li,
-             em, strong,
-             blockquote,
-             a,
-             img,
-             code } from './default/components.js';
-    export { h1, h2, h3, h4, h5, h6,
-             p,
-             ul, ol, li,
-             em, strong,
-             blockquote,
-             a,
-             img,
-             code  };
+    import {h1, h2, h3, h4, h5, h6,
+            p,
+            ul, ol, li,
+            em, strong,
+            blockquote,
+            a,
+            img,
+            code,
+            table, tbody, td, th, thead, tr,
+            hr,
+            input } from './default/components.js';
+    export {h1, h2, h3, h4, h5, h6,
+            p,
+            ul, ol, li,
+            em, strong,
+            blockquote,
+            a,
+            img,
+            code,
+            table, tbody, td, th, thead, tr,
+            hr,
+            input  };
 
 
 </script>  
@@ -36,3 +42,8 @@
 </script>
 
 <slot></slot>
+
+
+<style>
+    
+</style>

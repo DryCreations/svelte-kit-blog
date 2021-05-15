@@ -1,0 +1,1 @@
+<hr class="border-gray-100 dark:border-gray-800 border-2 rounded-full " />

@@ -107,20 +107,20 @@
 
 
 <section class="overflow-hidden">
-    <div class="container px-5 sm:py-24 py-5 mx-auto">
-      <div class="my-8 divide-y-2 divide-gray-100">
+    <div class="container px-5 sm:pb-24 py-5 mx-auto">
+      <div class="my-8 divide-y-2 divide-gray-100 dark:divide-gray-800">
         {#each currentPage as {metadata, link} (link)}
             <div class="py-8 flex flex-col md:flex-row flex-wrap md:flex-nowrap">
             <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                 {#each metadata.categories as category}
-                    <span class="">{category}</span>    
+                    <span class="font-semibold">{category}</span>    
                 {/each}
-                <span class="mt-1">{new Date(metadata.date).toDateString()}</span>
+                <span class="mt-1 text-sm dark:text-gray-400 text-gray-500">{new Date(metadata.date).toDateString()}</span>
             </div>
             <div class="md:flex-grow">
-                <h2 class=" mb-2">{metadata.title}</h2>
+                <h2 class=" mb-2 text-xl font-semibold">{metadata.title}</h2>
                 <p class="">{metadata.description}</p>
-                <a href={link} class="inline-flex items-center mt-4">Read Post
+                <a href={link} class="inline-flex items-center mt-4 text-indigo-600 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-500">Read Post
                 <span class="ml-2"><Arrow title="Read Post" direction="right" /></span>
                 </a>
             </div>
@@ -128,8 +128,8 @@
         {/each}
         
       </div>
-      <div class="flex justify-center space-x-1 mt-12">
-        <a href="{base}/blog/{Math.max(currPage - 1, 0)}/" disabled={!prev} class:cursor-not-allowed={!prev} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
+      <div class="flex justify-center space-x-1 mt-12 dark:text-gray-400 text-gray-500">
+        <a href="{base}/blog/{Math.max(currPage - 1, 0)}/" disabled={!prev} class:hover:text-gray-900={prev} class:dark:hover:text-white={prev} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
             <Arrow title={"previous page"} direction={"left"} />
         </a>    
 
@@ -138,13 +138,13 @@
         {/if}
         
         {#each pagination as num (num)}
-            <a href="{base}/blog/{num}/" class:text-indigo-600="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</a>
+            <a href="{base}/blog/{num}/" class:text-indigo-600="{num==currPage}" class:dark:text-yellow-400="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:dark:hover:text-white={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none  dark:border-yellow-400 border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</a>
         {/each}
         {#if pagination[pagination.length - 1] < numPages - 1}
             <span class="flex items-center justify-center w-8 h-8 rounded">...</span>
         {/if}
 
-        <a href="{base}/blog/{Math.min( numPages - 1,currPage + 1)}/" disabled={!next} class:cursor-not-allowed={!next} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
+        <a href="{base}/blog/{Math.min( numPages - 1,currPage + 1)}/" disabled={!next} class:hover:text-gray-900={next} class:dark:hover:text-white={next} class="  z-50 flex items-center justify-center h-8 px-2 rounded">
             <Arrow title={"next page"} direction={"right"} />
         </a>
     </div>

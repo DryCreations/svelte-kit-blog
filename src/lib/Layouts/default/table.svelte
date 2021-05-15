@@ -1,0 +1,1 @@
+<table class=" w-full text-left mt-8 mb-8 table-auto text-xs"><slot></slot></table>

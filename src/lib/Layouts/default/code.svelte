@@ -1,1 +1,1 @@
-<code class=""><slot></slot></code>
+<code class="bg-gray-800 text-white rounded-md p-1"><slot></slot></code>

@@ -1,1 +1,1 @@
-<blockquote class=""><slot></slot></blockquote>
+<blockquote class=" font-medium italic border-l-2 border-gray-200 mt-7 mb-7 p-4"><slot></slot></blockquote>

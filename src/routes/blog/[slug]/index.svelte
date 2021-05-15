@@ -30,7 +30,7 @@ import { base } from '$app/paths';
     <meta name="description" content={metadata.description} />
 </svelte:head>
 
-<article> 
+<article class="max-w-prose w-full text mx-auto text-base py-16"> 
     <Post />
 </article>
 
@@ -147,12 +147,7 @@ import { base } from '$app/paths';
             @apply font-normal
         }
     }
-    
-    @font-face {
-        font-family:'FiraCode';
-        src:url(https://viebel.github.io/klipse/fonts/FiraCode/woff2/FiraCode-Regular.woff2) format("webfont.woff2") ,url(https://viebel.github.io/klipse/fonts/FiraCode/woff/FiraCode-Regular.woff) format("woff"),url(https://viebel.github.io/klipse/fonts/FiraCode/ttf/FiraCode-Regular.ttf) format("truetype");
-        font-display:swap;
-    }
+
     
     .CodeMirror {
         font-family:'FiraCode',monospace;

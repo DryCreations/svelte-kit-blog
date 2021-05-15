@@ -1,1 +1,1 @@
-<em><slot></slot></em>
+<em class="italic"><slot></slot></em>

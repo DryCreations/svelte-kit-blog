@@ -31,14 +31,16 @@
 <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
     <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
       <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-        <h1 class="max-w-lg mb-6 md:mx-auto">
-            About
+        <h1 class="max-w-lg  mt-0 mb-3 md:mx-auto text-4xl font-extrabold">
+            About Me
         </h1>
-        <p class="">
+        <div class=" w-24 h-0.5 bg-indigo-600 dark:bg-yellow-400 mt-2 mb-2 mx-auto"></div>
+
             {#each blurb as i}
-                {i}
+                <h2 class="text-xl font-semibold mt-3 mb-2 ">
+                    {i}
+                </h2>
             {/each}
-        </p>
       </div>
     </div>
     <div class="max-w-screen-xl sm:mx-auto">
@@ -46,11 +48,11 @@
         <div class="space-y-8">
             {#each bio_left as i}
                  <div>
-                    <p class="mb-4">
+                    <h3 class=" font-medium mt-6 mb-2">
                         {i[0]}
-                    </p>
+                    </h3>
                     {#each i.slice(1) as j}
-                        <p class="mb-2">
+                        <p class="mt-5 mb-5">
                             {j}
                         </p>
                     {/each}
@@ -60,11 +62,11 @@
         <div class="space-y-8">
             {#each bio_right as i}
             <div>
-               <p class="mb-4">
+               <h3 class=" font-medium mt-6 mb-2">
                    {i[0]}
-               </p>
+               </h3>
                {#each i.slice(1) as j}
-                   <p class="">
+                   <p class="mt-5 mb-5">
                        {j}
                    </p>
                {/each}

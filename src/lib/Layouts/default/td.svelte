@@ -1,0 +1,1 @@
+<td class="align-top p-2 first:pl-0 last:pr-0"><slot></slot></td>

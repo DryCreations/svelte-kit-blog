@@ -1,0 +1,1 @@
+<th class=" align-bottom pr-2 pl-2 pb-2 first:pl-0 last:pr-0"><slot></slot></th>

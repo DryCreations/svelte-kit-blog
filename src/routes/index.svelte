@@ -26,16 +26,16 @@
 <section class="">
     <div class="container px-5 py-12 mx-auto flex flex-col">
       <div class="lg:w-4/6 mx-auto">
-        <div class="flex flex-col divide-y-2 sm:divide-x-2 sm:divide-y-0 divide-gray-100 sm:flex-row">
+        <div class="flex flex-col divide-y-2 sm:divide-x-2 sm:divide-y-0 divide-gray-100 dark:divide-gray-800 sm:flex-row">
           <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
             <div class="w-24 h-24 inline-flex items-center justify-center">
               <Head />
             </div>
             <div class="flex flex-col items-center text-center justify-center">
-              <h2 class="mt-4">{page.name}</h2>
-              <div class="w-12 h-0.5 bg-indigo-600 mt-2 mb-2"></div>
+              <h2 class="mt-4 text-lg font-semibold">{page.name}</h2>
+              <div class="w-12 h-0.5 bg-indigo-600 dark:bg-yellow-400 mt-2 mb-2"></div>
               {#each page.brief as brief}
-                <p class="">{brief}</p>  
+                <p class="italic text-sm">{brief}</p>  
               {/each}
             </div>
           </div>
@@ -43,7 +43,7 @@
             {#each page.bio as bio}
               <p class="mb-4">{bio}</p>  
             {/each}
-            <a href="{base}/about/" class="inline-flex items-center">More About Me
+            <a href="{base}/about/" class="inline-flex items-center text-indigo-600 hover:text-indigo-500 dark:text-yellow-400 dark:hover:text-yellow-500">More About Me
               <span class="ml-2"><Arrow title="Read Post" direction="right" /></span>
             </a>
           </div>
