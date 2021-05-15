@@ -41,25 +41,21 @@ arma? Mediis mota calamis mihi fertur in refer creatis, me. In dat domosque
 pererrato nam huius viribus domoque frena eo, pedes. Nefas amantes erat.
 
 ```eval-js
-let a = 1;
-let b = 1;
-
-let f = (test) => {
-	console.log(test);  
+let f = (i) => {
+  if (i < 2) return 1;
+  return f(i - 1) + f(i - 2);
 }
 
-f(5);
+[...Array(10).keys()].map(f)
 ```
 
 ```js
-let a = 1;
-let b = 1;
-
-let f = (test) => {
-	console.log(test);  
+let f = (i) => {
+  if (i < 2) return 1;
+  return f(i - 1) + f(i - 2);
 }
 
-f(5);
+[...Array(10).keys()].map(f)
 ```
 
 *Videbor* furta longo quam scrobibus obscurus borean! Et age Troiana suos iniqui
@@ -68,5 +64,5 @@ Achaemenide vestri vetitus, suos dubita, cernis si habebat adpellavere postquam
 refelli.
 
 <script>
-    import imageURL from './image.png';
+
 </script>
