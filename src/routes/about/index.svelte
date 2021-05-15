@@ -44,8 +44,8 @@
       </div>
     </div>
     <div class="max-w-screen-xl sm:mx-auto">
-      <div class="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2">
-        <div class="space-y-8">
+      <div class="grid grid-cols-1 lg:gap-16 row-gap-8 lg:grid-cols-2">
+        <div class="">
             {#each bio_left as i}
                  <div>
                     <h3 class=" font-medium mt-6 mb-2">
@@ -59,7 +59,7 @@
                  </div>
             {/each}
         </div>
-        <div class="space-y-8">
+        <div class="">
             {#each bio_right as i}
             <div>
                <h3 class=" font-medium mt-6 mb-2">
