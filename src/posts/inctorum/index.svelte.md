@@ -62,7 +62,3 @@ let f = (i) => {
 admonitus pulsavit: vultibus arma! Quo misi hamatisque Titani minabitur fixit
 Achaemenide vestri vetitus, suos dubita, cernis si habebat adpellavere postquam
 refelli.
-
-<script>
-
-</script>

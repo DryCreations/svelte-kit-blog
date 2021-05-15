@@ -5,15 +5,6 @@ import fs from 'fs'
 
 const dev = process.env.NODE_ENV === 'development';
 
-const getDirectories = source =>
-  fs.readdirSync(source, { withFileTypes: true })
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name)
-
-const posts_dir = getDirectories('./src/posts').map(dir => `/blog/${dir}`);
-
-const pages = [...Array(Math.ceil(posts_dir.length / 8)).keys()].map(dir => `/blog/${dir}`);
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -28,7 +19,7 @@ const config = {
 			crawl: true,
 			enabled: true,
 			force: false,
-			pages: ['*', ...posts_dir, ...pages]
+			pages: ['*']
 		},
 
 	},

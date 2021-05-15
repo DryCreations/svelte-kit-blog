@@ -129,7 +129,7 @@
         
       </div>
       <div class="flex justify-center space-x-1 mt-12">
-        <a href="{base}/blog/{currPage - 1}/" disabled={!prev} class:cursor-not-allowed={!prev} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
+        <a href="{base}/blog/{Math.min(currPage - 1, 0)}/" disabled={!prev} class:cursor-not-allowed={!prev} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
             <Arrow title={"previous page"} direction={"left"} />
         </a>    
 
@@ -144,7 +144,7 @@
             <span class="flex items-center justify-center w-8 h-8 rounded">...</span>
         {/if}
 
-        <a href="{base}/blog/{currPage + 1}/" disabled={!next} class:cursor-not-allowed={!next} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
+        <a href="{base}/blog/{Math.max( numPages - 1,currPage + 1)}/" disabled={!next} class:cursor-not-allowed={!next} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
             <Arrow title={"next page"} direction={"right"} />
         </a>
     </div>
