@@ -99,7 +99,7 @@ http://github.com - automatic!
 [GitHub](http://github.com)
 
 ## Strikethrough
-```
+```md
 ~~strike~~
 ```
 
@@ -107,7 +107,7 @@ http://github.com - automatic!
 
 ## Horizontal Row
 
-```
+```md
 ---
 ```
 
@@ -161,7 +161,7 @@ function fancyAlert(arg) {
 
 ### Syntax Highlighting
 
-```
+```md
 \`\`\`python
 def foo():
     if not bar:
@@ -177,7 +177,7 @@ def foo():
 
 ### Live Code
 
-```
+```md
 \`\`\`eval-js
 let f = (i) => {
   if (i < 2) return 1;
@@ -199,7 +199,7 @@ let f = (i) => {
 
 ## Task Lists
 
-```
+```md
 - [x] [links](), **formatting**, and <del>tags</del> supported
 - [x] list syntax required (any unordered or ordered list supported)
 - [x] this is a complete item
@@ -214,7 +214,7 @@ let f = (i) => {
 
 ## Tables
 
-```
+```md
 First Header | Second Header
 ------------ | -------------
 Content from cell 1 | Content from cell 2
