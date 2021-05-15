@@ -6,25 +6,30 @@
 		<script>
 			window.klipse_settings = {
 				selector_eval_js: 'pre.language-eval-js',
+				selector_eval_python_client: 'pre.language-eval-python',
+				selector_eval_cpp: 'pre.language-eval-cpp',
+				selector_brainfuck: 'pre.language-eval-brainfuck',
+
+
 			};
 		</script>
-		<title>Iunctorum ignarus Dymantida instabilis fetum mane fuerat</title><link rel="icon" href="/svelte-kit-blog/favicon.ico" data-svelte="svelte-13ywgbb"><meta name="description" content="Lorem markdownum graves, cum sensit et nunc tenet, hac. Dabimus quaere quoque?" data-svelte="svelte-i32x0v">
+		<title>Live Code Snippets</title><link rel="icon" href="/svelte-kit-blog/favicon.ico" data-svelte="svelte-13ywgbb"><meta name="description" content="A collection of live code editors in different languages." data-svelte="svelte-i32x0v">
 
 		
 
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/start-0f3e0ea3.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/start-aca3d593.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/vendor-a00fb730.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/preload-helper-9f12a5fd.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/paths-45dac81d.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/__layout.svelte-3c5e60d6.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/__layout.svelte-278fc942.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/stores-8757c1fd.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-f6dd13eb.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-5afc99e8.js">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/start-9aa571ba.css">
-		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/__layout.svelte-0dfea813.css">
+		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/__layout.svelte-88328e8e.css">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/blog/[slug]/index.svelte-ddfdd5d7.css">
 
 		<script type="module">
-			import { start } from "/svelte-kit-blog/_app/start-0f3e0ea3.js";
+			import { start } from "/svelte-kit-blog/_app/start-aca3d593.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/svelte-kit-blog","assets":"/svelte-kit-blog"},
@@ -37,14 +42,14 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/svelte-kit-blog/_app/pages/__layout.svelte-3c5e60d6.js"),
-						import("/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-f6dd13eb.js")
+						import("/svelte-kit-blog/_app/pages/__layout.svelte-278fc942.js"),
+						import("/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-5afc99e8.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/blog/inctorum/",
+						path: "/blog/live-code/",
 						query: new URLSearchParams(""),
-						params: {"slug":"inctorum"}
+						params: {"slug":"live-code"}
 					}
 				}
 			});
@@ -64,44 +69,23 @@
 
 <main class="container p-5 mx-auto flex-col flex">
 
-<article class="max-w-prose w-full text mx-auto text-base py-16 pb-24"><h1 class=" font-extrabold text-4xl mt-0 mb-3">Iunctorum ignarus Dymantida instabilis fetum mane fuerat</h1>
-<h2 class=" font-bold text-2xl mt-8 mb-4 ">Antiquus pridem caligine innuba sinusque liceret</h2>
-<p class=" mt-5 mb-5">Lorem markdownum graves, <code class="bg-gray-800 text-white rounded-md p-1">cum sensit</code> et nunc tenet, hac. Dabimus quaere quoque?
-Facies est avsis trahebat, sequerere nostri Leucosiamque mandat solet: atque
-verba, cupidusque maerens, summam. Deus precor moliturque illo Aesacon
-Lapitheia, primo, vicina turba sole passam oblita, nec superis Eleusin <em class="italic">primus</em>.</p>
-<h2 class=" font-bold text-2xl mt-8 mb-4 ">Pedicis canum est</h2>
-<p class=" mt-5 mb-5">Audentia cuius, ora veris enim subducere nodosaque peteret! Quique si erat ubi,
-gentes, nec tum.</p>
-<ol class=" list-decimal list-inside  mt-5 mb-5 svelte-cqhhxs"><li class=" mt-2 mb-2 svelte-53cp7j">Corpore resupinus Danaen</li>
-<li class=" mt-2 mb-2 svelte-53cp7j">Quod deus in fera</li>
-<li class=" mt-2 mb-2 svelte-53cp7j">Hoc in poscunt tulerat fuerit cladis altoque</li>
-<li class=" mt-2 mb-2 svelte-53cp7j">Cohibentur grave auxiliaris nescio</li></ol>
-<h2 class=" font-bold text-2xl mt-8 mb-4 ">Nec iste mactatae descendunt orbem volvuntur unum</h2>
-<p class=" mt-5 mb-5">Per umbrasque nam sine me gravi colebat, quoque saxum, tristi arboreis sic
-cursus sine vini. Nec tuo quae Sabinae emittite. Spumantis telluris frondosus
-varius nempe et spectare deum, Liberfemineae radii et locus ignes, sic. Perdam
-eminus poterit vota erat meoque paveant?</p>
-<h2 class=" font-bold text-2xl mt-8 mb-4 ">Faveant grave ferant mihi inplent data bello</h2>
-<p class=" mt-5 mb-5">Deficeret adveniens inque inponit utque servavit continet sanguinis primordia
-arma? Mediis mota calamis mihi fertur in refer creatis, me. In dat domosque
-pererrato nam huius viribus domoque frena eo, pedes. Nefas amantes erat.</p>
-<pre class="language-eval-js"><code class="language-eval-js">let f = (i) =&gt; &#123;
-  if (i &lt; 2) return 1;
-  return f(i - 1) + f(i - 2);
-&#125;
+<article class="max-w-prose w-full text mx-auto text-base py-16 pb-24"><h1 class=" font-extrabold text-4xl mt-0 mb-3">Live Code Snippets</h1>
+<p class=" mt-5 mb-5">I’m using <a href="https://github.com/viebel/klipse" rel="nofollow" title="https://github.com/viebel/klipse" class="text-indigo-600 hover:text-indigo-500 dark:hover:text-yellow-500 dark:text-yellow-400 underline font-medium">Klipse</a> to render live code editors in different languages. I only enabled a few different languages on this blog, mostly because I don’t know all of the languages it has available. This allows me to write more immersive blog posts with interactive elements.</p>
+<h2 class=" font-bold text-2xl mt-8 mb-4 ">Javascript</h2>
+<pre class="language-eval-js"><code class="language-eval-js">console.log(&quot;Hello World&quot;);</code></pre>
+<h2 class=" font-bold text-2xl mt-8 mb-4 ">C++</h2>
+<pre class="language-eval-cpp"><code class="language-eval-cpp">#include &lt;iostream&gt;
+using namespace std;
 
-[...Array(10).keys()].map(f)</code></pre>
-<pre class="language-js"><code class="language-js"><span class="token keyword">let</span> <span class="token function-variable function">f</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> <span class="token function">f</span><span class="token punctuation">(</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">f</span><span class="token punctuation">(</span>i <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token punctuation">[</span><span class="token operator">...</span><span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span></code></pre>
-<p class=" mt-5 mb-5"><em class="italic">Videbor</em> furta longo quam scrobibus obscurus borean! Et age Troiana suos iniqui
-admonitus pulsavit: vultibus arma! Quo misi hamatisque Titani minabitur fixit
-Achaemenide vestri vetitus, suos dubita, cernis si habebat adpellavere postquam
-refelli.</p>
+int main()
+&#123;
+  cout &lt;&lt; &quot;Hello World&quot; &lt;&lt; endl;
+  return 0;
+&#125;</code></pre>
+<h2 class=" font-bold text-2xl mt-8 mb-4 ">Python</h2>
+<pre class="language-eval-python"><code class="language-eval-python">print(&quot;Hello World&quot;)</code></pre>
+<h2 class=" font-bold text-2xl mt-8 mb-4 ">Brainfuck</h2>
+<pre class="language-eval-brainfuck"><code class="language-eval-brainfuck">++++++++[&gt;++++[&gt;++&gt;+++&gt;+++&gt;+&lt;&lt;&lt;&lt;-]&gt;+&gt;+&gt;-&gt;&gt;+[&lt;]&lt;-]&gt;&gt;.&gt;---.+++++++..+++.&gt;&gt;.&lt;-.&lt;.+++.------.--------.&gt;&gt;+.&gt;++.</code></pre>
 </article></main>
 
 <div class="h-96 md:h-40"></div>

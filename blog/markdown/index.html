@@ -6,25 +6,30 @@
 		<script>
 			window.klipse_settings = {
 				selector_eval_js: 'pre.language-eval-js',
+				selector_eval_python_client: 'pre.language-eval-python',
+				selector_eval_cpp: 'pre.language-eval-cpp',
+				selector_brainfuck: 'pre.language-eval-brainfuck',
+
+
 			};
 		</script>
-		<title>Markdown Sample</title><link rel="icon" href="/svelte-kit-blog/favicon.ico" data-svelte="svelte-13ywgbb"><meta name="description" content="Markdown" data-svelte="svelte-i32x0v">
+		<title>Markdown Sample</title><link rel="icon" href="/svelte-kit-blog/favicon.ico" data-svelte="svelte-13ywgbb"><meta name="description" content="A collection of different markdown elements, along with how they are rendered by the blog." data-svelte="svelte-i32x0v">
 
 		
 
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/start-0f3e0ea3.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/start-aca3d593.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/vendor-a00fb730.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/preload-helper-9f12a5fd.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/paths-45dac81d.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/__layout.svelte-3c5e60d6.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/__layout.svelte-278fc942.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/stores-8757c1fd.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-f6dd13eb.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-5afc99e8.js">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/start-9aa571ba.css">
-		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/__layout.svelte-0dfea813.css">
+		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/__layout.svelte-88328e8e.css">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/blog/[slug]/index.svelte-ddfdd5d7.css">
 
 		<script type="module">
-			import { start } from "/svelte-kit-blog/_app/start-0f3e0ea3.js";
+			import { start } from "/svelte-kit-blog/_app/start-aca3d593.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/svelte-kit-blog","assets":"/svelte-kit-blog"},
@@ -37,14 +42,14 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/svelte-kit-blog/_app/pages/__layout.svelte-3c5e60d6.js"),
-						import("/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-f6dd13eb.js")
+						import("/svelte-kit-blog/_app/pages/__layout.svelte-278fc942.js"),
+						import("/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-5afc99e8.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/blog/post-1/",
+						path: "/blog/markdown/",
 						query: new URLSearchParams(""),
-						params: {"slug":"post-1"}
+						params: {"slug":"markdown"}
 					}
 				}
 			});
@@ -66,6 +71,12 @@
 
 <article class="max-w-prose w-full text mx-auto text-base py-16 pb-24"><h1 class=" font-extrabold text-4xl mt-0 mb-3">Markdown Sample</h1>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Headings</h2>
+<pre class="language-md"><code class="language-md"><span class="token title important"><span class="token punctuation">#</span> This is an h1 tag</span>
+<span class="token title important"><span class="token punctuation">##</span> This is an h2 tag</span>
+<span class="token title important"><span class="token punctuation">###</span> This is an h3 tag</span>
+<span class="token title important"><span class="token punctuation">####</span> This is an h4 tag</span>
+<span class="token title important"><span class="token punctuation">#####</span> This is an h5 tag</span>
+<span class="token title important"><span class="token punctuation">######</span> This is an h6 tag</span></code></pre>
 <h1 class=" font-extrabold text-4xl mt-0 mb-3">This is an h1 tag</h1>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">This is an h2 tag</h2>
 <h3 class=" font-semibold text-xl mt-6 mb-2 ">This is an h3 tag</h3>
@@ -73,6 +84,13 @@
 <h5 class=" font-medium mt-6 mb-2">This is an h5 tag</h5>
 <h6 class=" font-medium mt-6 mb-2">This is an h6 tag</h6>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Emphasis</h2>
+<pre class="language-md"><code class="language-md"><span class="token italic"><span class="token punctuation">*</span><span class="token content">This text will be italic</span><span class="token punctuation">*</span></span>
+<span class="token italic"><span class="token punctuation">_</span><span class="token content">This will also be italic</span><span class="token punctuation">_</span></span>
+
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">This text will be bold</span><span class="token punctuation">**</span></span>
+<span class="token bold"><span class="token punctuation">__</span><span class="token content">This will also be bold</span><span class="token punctuation">__</span></span>
+
+<span class="token italic"><span class="token punctuation">_</span><span class="token content">You <span class="token bold"><span class="token punctuation">**</span><span class="token content">can</span><span class="token punctuation">**</span></span> combine them</span><span class="token punctuation">_</span></span></code></pre>
 <p class=" mt-5 mb-5"><em class="italic">This text will be italic</em>
 <em class="italic">This will also be italic</em></p>
 <p class=" mt-5 mb-5"><strong class=" font-semibold ">This text will be bold</strong>
@@ -80,38 +98,82 @@
 <p class=" mt-5 mb-5"><em class="italic">You <strong class=" font-semibold ">can</strong> combine them</em></p>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Lists</h2>
 <h3 class=" font-semibold text-xl mt-6 mb-2 ">Unordered</h3>
+<pre class="language-md"><code class="language-md"><span class="token list punctuation">*</span> Item 1
+<span class="token list punctuation">*</span> Item 2
+  <span class="token list punctuation">*</span> Item 2a
+  <span class="token list punctuation">*</span> Item 2b</code></pre>
 <ul class=" list-disc list-inside mt-5 mb-5 svelte-6jd03y"><li class=" mt-2 mb-2 svelte-53cp7j">Item 1</li>
 <li class=" mt-2 mb-2 svelte-53cp7j">Item 2<ul class=" list-disc list-inside mt-5 mb-5 svelte-6jd03y"><li class=" mt-2 mb-2 svelte-53cp7j">Item 2a</li>
 <li class=" mt-2 mb-2 svelte-53cp7j">Item 2b</li></ul></li></ul>
 <h3 class=" font-semibold text-xl mt-6 mb-2 ">Ordered</h3>
+<pre class="language-md"><code class="language-md"><span class="token list punctuation">1.</span> Item 1
+<span class="token list punctuation">1.</span> Item 2
+<span class="token list punctuation">1.</span> Item 3
+   <span class="token list punctuation">1.</span> Item 3a
+   <span class="token list punctuation">1.</span> Item 3b</code></pre>
 <ol class=" list-decimal list-inside  mt-5 mb-5 svelte-cqhhxs"><li class=" mt-2 mb-2 svelte-53cp7j">Item 1</li>
 <li class=" mt-2 mb-2 svelte-53cp7j">Item 2</li>
 <li class=" mt-2 mb-2 svelte-53cp7j">Item 3<ol class=" list-decimal list-inside  mt-5 mb-5 svelte-cqhhxs"><li class=" mt-2 mb-2 svelte-53cp7j">Item 3a</li>
 <li class=" mt-2 mb-2 svelte-53cp7j">Item 3b</li></ol></li></ol>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Images</h2>
+<pre class="language-md"><code class="language-md"><span class="token url"><span class="token operator">!</span>[<span class="token content">GitHub Logo</span>](<span class="token url">https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png</span>)</span></code></pre>
 <p class=" mt-5 mb-5"><div><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class=" mt-8 mb-8 rounded-md mx-auto"></div></p>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Links</h2>
+<pre class="language-md"><code class="language-md">http://github.com - automatic!
+<span class="token url">[<span class="token content">GitHub</span>](<span class="token url">http://github.com</span>)</span></code></pre>
 <p class=" mt-5 mb-5"><a href="http://github.com" rel="nofollow" title="http://github.com" class="text-indigo-600 hover:text-indigo-500 dark:hover:text-yellow-500 dark:text-yellow-400 underline font-medium">http://github.com</a> - automatic!
 <a href="http://github.com" rel="nofollow" title="http://github.com" class="text-indigo-600 hover:text-indigo-500 dark:hover:text-yellow-500 dark:text-yellow-400 underline font-medium">GitHub</a></p>
+<h2 class=" font-bold text-2xl mt-8 mb-4 ">Strikethrough</h2>
+<pre class="language-undefined"><code class="language-undefined">~~strike~~</code></pre>
+<p class=" mt-5 mb-5"><del>strike</del></p>
+<h2 class=" font-bold text-2xl mt-8 mb-4 ">Horizontal Row</h2>
+<pre class="language-undefined"><code class="language-undefined">---</code></pre>
+<hr class="border-gray-100 dark:border-gray-800 border-2 rounded-full ">
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Blockquotes</h2>
+<pre class="language-md"><code class="language-md">As Kanye West said:
+
+<span class="token blockquote punctuation">></span> We're living the future so
+<span class="token blockquote punctuation">></span> the present is our past.</code></pre>
 <p class=" mt-5 mb-5">As Kanye West said:</p>
 <blockquote class=" font-medium italic border-l-2 border-gray-200 mt-7 mb-7 p-4"><p class=" mt-5 mb-5">We’re living the future so
 the present is our past.</p></blockquote>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Inline Code</h2>
+<pre class="language-md"><code class="language-md">I think you should use an 
+<span class="token code keyword">&#96;&lt;addr>&#96;</span> element here instead.</code></pre>
 <p class=" mt-5 mb-5">I think you should use an
 <code class="bg-gray-800 text-white rounded-md p-1">&lt;addr&gt;</code> element here instead.</p>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Code Blocks</h2>
 <h3 class=" font-semibold text-xl mt-6 mb-2 ">Simple Code Blocks</h3>
+<pre class="language-md"><code class="language-md"><span class="token code keyword">&#96;&#96;</span>&#96;
+function fancyAlert(arg) &#123;
+  if(arg) &#123;
+    $.facebox(&#123;div:'#foo'&#125;)
+  &#125;
+&#125;
+<span class="token code keyword">&#96;&#96;</span>&#96;</code></pre>
 <pre class="language-undefined"><code class="language-undefined">function fancyAlert(arg) &#123;
   if(arg) &#123;
     $.facebox(&#123;div:&#39;#foo&#39;&#125;)
   &#125;
 &#125;</code></pre>
 <h3 class=" font-semibold text-xl mt-6 mb-2 ">Syntax Highlighting</h3>
+<pre class="language-undefined"><code class="language-undefined">&#96;&#96;&#96;python
+def foo():
+    if not bar:
+        return True
+&#96;&#96;&#96;</code></pre>
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> <span class="token keyword">not</span> bar<span class="token punctuation">:</span>
         <span class="token keyword">return</span> <span class="token boolean">True</span></code></pre>
 <h3 class=" font-semibold text-xl mt-6 mb-2 ">Live Code</h3>
+<pre class="language-undefined"><code class="language-undefined">&#96;&#96;&#96;eval-js
+let f = (i) =&gt; &#123;
+  if (i &lt; 2) return 1;
+  return f(i - 1) + f(i - 2);
+&#125;
+
+[...Array(10).keys()].map(f)
+&#96;&#96;&#96;</code></pre>
 <pre class="language-eval-js"><code class="language-eval-js">let f = (i) =&gt; &#123;
   if (i &lt; 2) return 1;
   return f(i - 1) + f(i - 2);
@@ -119,21 +181,25 @@ the present is our past.</p></blockquote>
 
 [...Array(10).keys()].map(f)</code></pre>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Task Lists</h2>
+<pre class="language-undefined"><code class="language-undefined">- [x] [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item</code></pre>
 <ul class="contains-task-list list-disc list-inside mt-5 mb-5 svelte-6jd03y"><li class="task-list-item mt-2 mb-2 svelte-53cp7j"><span class="w-3 h-3 justify-center content-center inline-flex items-center rounded-sm dark:border-white dark:text-white border-gray-900 text-gray-900 border p-0 m-0 mr-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span> <a href rel="" title class="text-indigo-600 hover:text-indigo-500 dark:hover:text-yellow-500 dark:text-yellow-400 underline font-medium">links</a>, <strong class=" font-semibold ">formatting</strong>, and <del>tags</del> supported</li>
 <li class="task-list-item mt-2 mb-2 svelte-53cp7j"><span class="w-3 h-3 justify-center content-center inline-flex items-center rounded-sm dark:border-white dark:text-white border-gray-900 text-gray-900 border p-0 m-0 mr-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span> list syntax required (any unordered or ordered list supported)</li>
 <li class="task-list-item mt-2 mb-2 svelte-53cp7j"><span class="w-3 h-3 justify-center content-center inline-flex items-center rounded-sm dark:border-white dark:text-white border-gray-900 text-gray-900 border p-0 m-0 mr-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span> this is a complete item</li>
 <li class="task-list-item mt-2 mb-2 svelte-53cp7j"><span class="w-3 h-3 justify-center content-center inline-flex items-center rounded-sm dark:border-white dark:text-white border-gray-900 text-gray-900 border p-0 m-0 mr-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 inline-block hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></span> this is an incomplete item</li></ul>
 <h2 class=" font-bold text-2xl mt-8 mb-4 ">Tables</h2>
+<pre class="language-undefined"><code class="language-undefined">First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column</code></pre>
 <table class=" w-full text-left mt-8 mb-8 table-auto text-xs"><thead class="font-semibold border-b-2 dark:border-gray-800 border-gray-100"><tr><th class=" align-bottom pr-2 pl-2 pb-2 first:pl-0 last:pr-0">First Header</th>
 <th class=" align-bottom pr-2 pl-2 pb-2 first:pl-0 last:pr-0">Second Header</th></tr></thead>
 <tbody class="divide-y divide-gray-100 dark:divide-gray-800"><tr><td class="align-top p-2 first:pl-0 last:pr-0">Content from cell 1</td>
 <td class="align-top p-2 first:pl-0 last:pr-0">Content from cell 2</td></tr>
 <tr><td class="align-top p-2 first:pl-0 last:pr-0">Content in the first column</td>
 <td class="align-top p-2 first:pl-0 last:pr-0">Content in the second column</td></tr></tbody></table>
-<h2 class=" font-bold text-2xl mt-8 mb-4 ">Strikethrough</h2>
-<p class=" mt-5 mb-5"><del>strike</del></p>
-<h2 class=" font-bold text-2xl mt-8 mb-4 ">Horizontal Row</h2>
-<hr class="border-gray-100 dark:border-gray-800 border-2 rounded-full ">
 </article></main>
 
 <div class="h-96 md:h-40"></div>
