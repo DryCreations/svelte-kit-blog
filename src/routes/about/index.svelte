@@ -34,7 +34,7 @@
         <h1 class="max-w-lg  mt-0 mb-3 md:mx-auto text-4xl font-extrabold">
             About Me
         </h1>
-        <div class=" w-24 h-0.5 bg-indigo-600 dark:bg-yellow-400 mt-2 mb-2 mx-auto"></div>
+        <div class=" w-24 h-0.5 bg-indigo-600 dark:bg-yellow-400 mt-2 mb-2 inline-block"></div>
 
             {#each blurb as i}
                 <h2 class="text-xl font-semibold mt-3 mb-2 ">
