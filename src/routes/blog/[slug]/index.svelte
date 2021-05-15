@@ -37,6 +37,9 @@ import { base } from '$app/paths';
 
 
 <style global lang="postcss">
+    .CodeMirror textarea {
+        @apply bg-black text-white
+    }
     code[class*="language-"],pre[class*="language-"] {
         font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
         text-align:left;
@@ -256,7 +259,7 @@ import { base } from '$app/paths';
     
     .CodeMirror {
 
-        @apply relative overflow-hidden bg-white
+        @apply relative overflow-hidden bg-gray-800
     }
     
     .CodeMirror-scroll {
