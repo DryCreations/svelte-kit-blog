@@ -8,7 +8,7 @@
     ]
   }
 </script>
-<div class="h-96 md:h-40"></div>
+<div class="h-96 lg:h-40"></div>
 <div  class="bottom-0 absolute lg:static">
 <footer class=" z-50 lg:absolute lg:bottom-0 lg:left-0 lg:right-0 container px-5 py-8 mx-auto flex items-center lg:flex-row flex-col">
     <div class="text-center lg:text-left mt-4 lg:mt-0 lg:py-2 text-xs text-gray-500 dark:text-gray-400">
