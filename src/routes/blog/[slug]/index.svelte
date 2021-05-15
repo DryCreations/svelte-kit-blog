@@ -1,8 +1,7 @@
 <script context="module">
     export async function load ({ page }) {
         try {
-            let {metadata, default: Component} = await import(`./../../../posts/${page.params.slug}/index.svelte.md`)
-
+            let {metadata, default: Component} = await import(/* @vite ignore */ `./../../../posts/${page.params.slug}/index.svelte.md`)
             return {
                 props: {
                     post: {

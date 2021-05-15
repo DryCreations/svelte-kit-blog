@@ -1,7 +1,6 @@
 import { mdsvex } from "mdsvex";
-import adapter from '@sveltejs/adapter-static';
+import static_adapter from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
-import fs from 'fs'
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -9,7 +8,7 @@ const dev = process.env.NODE_ENV === 'development';
 const config = {
 	kit: {
 		target: '#svelte',
-		adapter: adapter(),
+		adapter: static_adapter(),
 		paths: {
 			base: dev ? '' : '/svelte-kit-blog',
 			assets: dev ? '' : '/svelte-kit-blog'
