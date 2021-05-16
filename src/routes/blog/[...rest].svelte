@@ -5,10 +5,6 @@
         let pageNum = 0;
 
         let rest = params.rest.split('/');
-        
-        let tags = query.getAll('tag');
-        let categories = query.getAll('category');
-        let search = query.get('search');
 
         if (!isNaN(rest[0]) && !rest[1]) {
             pageNum = rest[0];
@@ -29,29 +25,9 @@
             return new Date(b.metadata.date) - new Date(a.metadata.date);
         })
 
-
-        let filteredPosts = posts.filter((o) => {
-            let flag = false;
-
-            let contains_tag = !tags?.length;
-            contains_tag |= tags?.some((e) => {
-                return o.metadata.tags.includes(e);
-            });
-            
-            let in_category = !categories?.length;
-            in_category |= categories?.some((e) => {
-                return o.metadata.categories.includes(e);
-            });
-
-            let title_matches_search = o.metadata.title.toLowerCase().includes(search?.toLowerCase() || '');
-
-            let desc_matches_search = o.metadata.description.toLowerCase().includes(search?.toLowerCase() || '');
-            return (contains_tag && in_category && (title_matches_search || desc_matches_search))
-        });
-
         return {
             props: {
-                posts: filteredPosts,
+                posts,
                 pageNum,
             }
         }
@@ -59,21 +35,54 @@
 </script>
 
 <script>
-    import { getStores, navigating, page, session } from '$app/stores';
+    import { getStores } from '$app/stores';
+    let stores = getStores();
 
-    let {params} = getStores();
+    let {page} = stores;
+
+    $: params = ($page).params;
+    $: query = ($page).query;
+
+    $: console.log(query);
+
+    $: tags = (query)?.getAll('tag');
+    $: categories = (query)?.getAll('category');
+    $: search = (query)?.get('search');
+
+    $: console.log(search);
 
     export let posts;
     export let pageNum
 
     export let perPage = 8;
-    $: currPage = pageNum || ($params)?.rest.split('/')[0] || 0;
 
-    $: numPages = Math.ceil(posts.length / perPage);
+    $: filteredPosts = posts.filter((o) => {
+        let flag = false;
+
+        let contains_tag = !tags?.length;
+        contains_tag |= tags?.some((e) => {
+            return o.metadata.tags.includes(e);
+        });
+        
+        let in_category = !categories?.length;
+        in_category |= categories?.some((e) => {
+            return o.metadata.categories.includes(e);
+        });
+
+        let title_matches_search = o.metadata.title.toLowerCase().includes(search?.toLowerCase() || '');
+
+        let desc_matches_search = o.metadata.description.toLowerCase().includes(search?.toLowerCase() || '');
+        return (contains_tag && in_category && (title_matches_search || desc_matches_search))
+    });
+
+
+    $: currPage = pageNum || (params)?.rest.split('/')[0] || 0;
+
+    $: numPages = Math.ceil(filteredPosts.length / perPage);
 
     $: currPage = Math.max(0, Math.min(numPages - 1, currPage))
 
-    $: currentPage = posts.slice(currPage * perPage, currPage * perPage + perPage);
+    $: currentPage = filteredPosts.slice(currPage * perPage, currPage * perPage + perPage);
 
     $: pagination = [];
 
