@@ -3,9 +3,6 @@
 
     export async function load ( { page: {query, params} } ) {
         let pageNum = 0;
-
-        console.log(query.toString())
-
         let rest = params.rest.split('/');
 
         if (!isNaN(rest[0]) && !rest[1]) {
@@ -48,8 +45,7 @@
     $: tags = (query)?.getAll('tag');
     $: categories = (query)?.getAll('category');
     $: search = (query)?.get('search');
-
-
+    
     export let posts;
     export let pageNum
 
