@@ -4,6 +4,8 @@
     export async function load ( { page: {query, params} } ) {
         let pageNum = 0;
 
+        console.log(query.toString())
+
         let rest = params.rest.split('/');
 
         if (!isNaN(rest[0]) && !rest[1]) {
@@ -43,13 +45,10 @@
     $: params = ($page).params;
     $: query = ($page).query;
 
-    $: console.log(query.toString());
-
     $: tags = (query)?.getAll('tag');
     $: categories = (query)?.getAll('category');
     $: search = (query)?.get('search');
 
-    $: console.log(search);
 
     export let posts;
     export let pageNum
@@ -106,6 +105,8 @@
     $: prev = (currPage > 0);
     $: next = (currPage < numPages - 1);
 
+    $: qs = (query.toString() == '') ? '' : `?${query.toString()}`;
+
     import Arrow from '$lib/SVG/Arrow.svelte';
 </script>
 
@@ -140,7 +141,7 @@
         
       </div>
       <div class="flex justify-center space-x-1 mt-12 dark:text-gray-400 text-gray-500">
-        <a href="{base}/blog/{Math.max(currPage - 1, 0)}/" class:pointer-events-none={!prev} class:dark:text-gray-700={!prev} class:text-gray-300={!prev} class:hover:text-gray-900={prev} class:dark:hover:text-white={prev} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
+        <a href="{base}/blog/{Math.max(currPage - 1, 0)}/{qs}" class:pointer-events-none={!prev} class:dark:text-gray-700={!prev} class:text-gray-300={!prev} class:hover:text-gray-900={prev} class:dark:hover:text-white={prev} class=" z-50 flex items-center justify-center h-8 px-2 rounded">
             <Arrow title={"previous page"} direction={"left"} />
         </a>    
 
@@ -149,13 +150,13 @@
         {/if}
         
         {#each pagination as num (num)}
-            <a href="{base}/blog/{num}/" class:text-indigo-600="{num==currPage}" class:dark:text-yellow-400="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:dark:hover:text-white={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none  dark:border-yellow-400 border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</a>
+            <a href="{base}/blog/{num}/{qs}" class:text-indigo-600="{num==currPage}" class:dark:text-yellow-400="{num==currPage}" class:hover:text-gray-900={num!=currPage} class:dark:hover:text-white={num!=currPage} class:border-t-2="{num==currPage}" class="z-50 rounded-none  dark:border-yellow-400 border-indigo-600 flex items-center justify-center w-8 h-8 text-sm font-medium dark:bg-violet-200 dark:text-violet-500">{num}</a>
         {/each}
         {#if pagination[pagination.length - 1] < numPages - 1}
             <span class="flex items-center justify-center w-8 h-8 rounded">...</span>
         {/if}
 
-        <a href="{base}/blog/{Math.min( numPages - 1,currPage + 1)}/" class:pointer-events-none={!next} class:dark:text-gray-700={!next} class:text-gray-300={!next} class:hover:text-gray-900={next} class:dark:hover:text-white={next} class="  z-50 flex items-center justify-center h-8 px-2 rounded">
+        <a href="{base}/blog/{Math.min( numPages - 1,currPage + 1)}/{qs}" class:pointer-events-none={!next} class:dark:text-gray-700={!next} class:text-gray-300={!next} class:hover:text-gray-900={next} class:dark:hover:text-white={next} class="  z-50 flex items-center justify-center h-8 px-2 rounded">
             <Arrow title={"next page"} direction={"right"} />
         </a>
     </div>
