@@ -134,7 +134,7 @@ let create = async (answers) => {
 
 //     let answers = {
 //         title: `Test Post ${i}`,
-//         slug: `test-post-${i}`,
+//         slug: `z-test-post-${i}`,
 //         description: 'Test Post Please Ignore',
 //         author: 'Hayden Mankin',
 //         date: date.toISOString(),
