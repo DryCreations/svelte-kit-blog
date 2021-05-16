@@ -1,6 +1,7 @@
 ---
 title: Live Code Snippets
 description: A collection of live code editors in different languages.
+author: Hayden Mankin
 date: 2021-05-14 00:00:00
 categories:
 - Blog Features

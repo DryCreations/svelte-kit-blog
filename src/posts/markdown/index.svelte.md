@@ -1,6 +1,7 @@
 ---
 title: Markdown Sample
 description: A collection of different markdown elements, along with how they are rendered by the blog.
+author: Hayden Mankin
 date: 2021-05-15 00:00:00
 categories:
 - Blog Features

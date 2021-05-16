@@ -33,6 +33,7 @@
     export let date;
     export let categories;
     export let tags;
+    export let author;
 
 
     onMount(async () => {
