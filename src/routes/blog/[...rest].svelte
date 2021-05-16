@@ -43,7 +43,7 @@
     $: params = ($page).params;
     $: query = ($page).query;
 
-    $: console.log(query);
+    $: console.log(query.toString());
 
     $: tags = (query)?.getAll('tag');
     $: categories = (query)?.getAll('category');
