@@ -1,4 +1,6 @@
 <script>
+import {base} from '$app/paths'
+
 import { goto } from "$app/navigation";
 
     let search;
@@ -8,7 +10,7 @@ import { goto } from "$app/navigation";
     let redirect = (e) => {
         if (e.which === 13) {
             console.log()
-            goto(`/blog/${qs}`);
+            goto(`${base}/blog/${qs}`);
         }
     }
 
