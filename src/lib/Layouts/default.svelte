@@ -38,9 +38,7 @@
     onMount(async () => {
         let klipse = 'https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js';
 
-        console.log('mounted');
         if (document.querySelectorAll('[src="' + klipse + '"]').length > 0) {
-            console.log('already klipsed');
 
             Object.values(window.eval_languages).forEach((o) => {
                 let mode = o[1];
@@ -50,7 +48,6 @@
                 })
             })
         } else {
-            console.log('not yet klipsed');
 
             let script = document.createElement('script');
             script.setAttribute('src', klipse);
