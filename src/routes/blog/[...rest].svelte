@@ -46,6 +46,11 @@
         if (window.location.search) mountParams = new URLSearchParams(window.location.search); 
     });
 
+    beforeUpdate(() => {
+        if (window.location.search) mountParams = new URLSearchParams(window.location.search); 
+	});
+
+
     $: params = ($page).params;
     $: query = mountParams || ($page).query;
 
