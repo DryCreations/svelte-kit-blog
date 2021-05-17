@@ -1,7 +1,7 @@
 <script context="module">
     import { base } from '$app/paths';
 
-    export async function load ( { page: {query, params} } ) {
+    export async function load ( { fetch, page: {query, params} } ) {
         let pageNum = 0;
         let rest = params.rest.split('/');
 
@@ -14,22 +14,18 @@
             }
         }
 
-        let imports = import.meta.globEager('./../../posts/*/index.svelte.md');
-        let blog = Object.entries(imports);
-
-        let posts = blog.map(([slug, { metadata }]) => ({
-            metadata: metadata,
-            link: `${base}/blog/${slug.split('/').slice(-2)[0]}/`
-        })).sort((a,b)=>{
-            return new Date(b.metadata.date) - new Date(a.metadata.date);
-        })
-
-        return {
+        const res = await fetch('/api/posts');
+    
+        if (res.ok) return {
             props: {
-                posts,
+                posts: await res.json(),
                 pageNum,
             }
         }
+        return {
+            status: res.status,
+            error: new Error()
+        };
     }
 </script>
 
