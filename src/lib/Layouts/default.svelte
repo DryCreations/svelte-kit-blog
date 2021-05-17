@@ -38,9 +38,20 @@
     onMount(async () => {
         let klipse = 'https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js';
 
+        console.log('mounted');
         if (document.querySelectorAll('[src="' + klipse + '"]').length > 0) {
-            window.klipse.plugin.init(window.klipse_settings)
+            console.log('already klipsed');
+
+            Object.values(window.eval_languages).forEach((o) => {
+                let mode = o[1];
+                let selector = o[0];
+                document.querySelectorAll(selector).forEach((e) => {
+                    window.klipse.plugin.klipsify(e, window.klipse_settings, mode);
+                })
+            })
         } else {
+            console.log('not yet klipsed');
+
             let script = document.createElement('script');
             script.setAttribute('src', klipse);
             document.getElementsByTagName('head')[0].appendChild(script);

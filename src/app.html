@@ -4,11 +4,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
+			window.eval_languages = {
+				selector_eval_js: ['pre.language-eval-js', 'eval-javascript'],
+				selector_eval_python_client: ['pre.language-eval-python', 'eval-python-client'],
+				selector_eval_cpp: ['pre.language-eval-cpp', 'eval-cpp'],
+				selector_brainfuck: ['pre.language-eval-brainfuck', 'eval-brainfuck'],
+			};
+
 			window.klipse_settings = {
-				selector_eval_js: 'pre.language-eval-js',
-				selector_eval_python_client: 'pre.language-eval-python',
-				selector_eval_cpp: 'pre.language-eval-cpp',
-				selector_brainfuck: 'pre.language-eval-brainfuck',
+				...(
+					Object.fromEntries(Object.entries(window.eval_languages).map(e => [e[0], e[1][0]]))
+				)
 			};
 		</script>
 		%svelte.head%
