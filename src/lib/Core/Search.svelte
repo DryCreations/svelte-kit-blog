@@ -1,3 +1,12 @@
+<script context="module">
+	export function load({}) {
+		return {
+			maxage: 31536000
+		};
+	}
+</script>
+
+
 <script>
 import {base} from '$app/paths'
 
