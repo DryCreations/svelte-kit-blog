@@ -4,31 +4,37 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<script>
+			window.eval_languages = {
+				selector_eval_js: ['pre.language-eval-js', 'eval-javascript'],
+				selector_eval_python_client: ['pre.language-eval-python', 'eval-python-client'],
+				selector_eval_cpp: ['pre.language-eval-cpp', 'eval-cpp'],
+				selector_brainfuck: ['pre.language-eval-brainfuck', 'eval-brainfuck'],
+			};
+
 			window.klipse_settings = {
-				selector_eval_js: 'pre.language-eval-js',
-				selector_eval_python_client: 'pre.language-eval-python',
-				selector_eval_cpp: 'pre.language-eval-cpp',
-				selector_brainfuck: 'pre.language-eval-brainfuck',
+				...(
+					Object.fromEntries(Object.entries(window.eval_languages).map(e => [e[0], e[1][0]]))
+				)
 			};
 		</script>
 		<title>Test Post 9</title><link rel="icon" href="/svelte-kit-blog/favicon.ico" data-svelte="svelte-13ywgbb"><meta name="description" content="Test Post Please Ignore" data-svelte="svelte-i32x0v">
 
 		
 
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/start-7552bf0f.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/start-14d04b99.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/vendor-82f036b7.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/preload-helper-9f12a5fd.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/singletons-bb9012b7.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/paths-45dac81d.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/__layout.svelte-b6bb8daf.js">
 		<link rel="modulepreload" href="/svelte-kit-blog/_app/chunks/stores-9861be58.js">
-		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-420ddf88.js">
+		<link rel="modulepreload" href="/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-3ffdcef8.js">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/start-9aa571ba.css">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/__layout.svelte-bead113a.css">
 		<link rel="stylesheet" href="/svelte-kit-blog/_app/assets/pages/blog/[slug]/index.svelte-ddfdd5d7.css">
 
 		<script type="module">
-			import { start } from "/svelte-kit-blog/_app/start-7552bf0f.js";
+			import { start } from "/svelte-kit-blog/_app/start-14d04b99.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"/svelte-kit-blog","assets":"/svelte-kit-blog"},
@@ -42,7 +48,7 @@
 					error: null,
 					nodes: [
 						import("/svelte-kit-blog/_app/pages/__layout.svelte-b6bb8daf.js"),
-						import("/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-420ddf88.js")
+						import("/svelte-kit-blog/_app/pages/blog/[slug]/index.svelte-3ffdcef8.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
