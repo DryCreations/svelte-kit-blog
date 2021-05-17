@@ -39,8 +39,17 @@
 
     let {page} = stores;
 
+	import { onMount } from 'svelte';
+
+    let mountParams;
+
+    onMount(() => {
+        console.log(($page)?.query.get('search'), window.location.search);
+        if (window.location.search) mountParams = new URLSearchParams(window.location.search); 
+    });
+
     $: params = ($page).params;
-    $: query = ($page).query;
+    $: query = mountParams || ($page).query;
 
     $: tags = (query)?.getAll('tag');
     $: categories = (query)?.getAll('category');
