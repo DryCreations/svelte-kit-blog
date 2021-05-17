@@ -5,7 +5,9 @@
 
   let path;
 
-  getStores().page.subscribe((o) => {path= o.path})
+  let {page} = getStores()
+
+  $: path = ($page).path;
 
   let info = {
     title: 'My Blog'
