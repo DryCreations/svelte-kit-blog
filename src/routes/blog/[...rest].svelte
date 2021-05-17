@@ -39,7 +39,7 @@
 
     let {page} = stores;
 
-	import { onMount } from 'svelte';
+	import { onMount,beforeUpdate,afterUpdate } from 'svelte';
 
     let mountParams;
     onMount(() => {
