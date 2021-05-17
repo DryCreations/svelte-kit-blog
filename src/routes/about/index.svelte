@@ -28,7 +28,7 @@
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed ante et nunc iaculis elementum non quis augue. Vestibulum tellus enim, ultricies at congue quis, lobortis eget tellus. Etiam nulla ipsum, volutpat sit amet laoreet ultricies, scelerisque non est. Integer vitae laoreet arcu, eu mollis risus. Duis a est vitae lectus ullamcorper mollis. Morbi elementum, enim cursus sagittis bibendum, leo nisl posuere urna, quis finibus risus velit a nibh. In a turpis cursus, congue est non, sodales arcu. Nam vulputate quam vel risus rutrum, id porttitor nunc imperdiet. Nunc sapien ligula, rutrum nec euismod vel, consequat sit amet erat. Proin mollis viverra ante vel porttitor. Ut ex sapien, consectetur sed." />
 </svelte:head>
 
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+<div class="px-4 pt-8 pb-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-20">
     <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
       <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <h1 class="max-w-lg  mt-0 mb-3 md:mx-auto text-4xl font-extrabold">

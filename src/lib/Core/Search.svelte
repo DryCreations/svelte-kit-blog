@@ -20,7 +20,7 @@ import { goto } from "$app/navigation";
 </script>
 
     <label class="flex flex-row-reverse items-center">
-    <input bind:this={textBox} bind:value={search} on:keydown={redirect} class="ml-5 outline-none dark:text-gray-400 text-gray-500 dark:focus:text-white focus:text-gray-900 bg-transparent w-0 focus:w-32 border-b-2 dark:focus:border-white focus:border-gray-900 dark:border-gray-400 border-gray-500" >
+    <input bind:this={textBox} bind:value={search} on:keydown={redirect} class="focus:ml-5 outline-none dark:text-gray-400 text-gray-500 dark:focus:text-white focus:text-gray-900 bg-transparent w-0 focus:w-32 border-b-2 dark:focus:border-white focus:border-gray-900 dark:border-gray-400 border-gray-500" >
 
     <button on:click={focusOnSearch} tabindex="-1" class="">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 dark:hover:text-white hover:text-gray-900 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -37,7 +37,7 @@ import { goto } from "$app/navigation";
     }
 
     input {
-        transition-property: width;
+        transition-property: width, margin;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
         transition-delay: 5s;

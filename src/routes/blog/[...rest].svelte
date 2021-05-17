@@ -127,8 +127,8 @@
 
 
 <section class="overflow-hidden">
-    <div class="container px-5 sm:pb-24 py-5 mx-auto">
-      <div class="my-8 divide-y-2 divide-gray-100 dark:divide-gray-800">
+    <div class="container px-5 sm:pb-24 pb-5 mx-auto">
+      <div class="mb-8 divide-y-2 divide-gray-100 dark:divide-gray-800">
         {#each currentPage as {metadata, link} (link)}
             <div class="py-8 flex flex-col md:flex-row flex-wrap md:flex-nowrap">
             <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
