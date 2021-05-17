@@ -35,11 +35,20 @@
     export let tags;
     export let author;
 
-
     onMount(async () => {
-        if (window.klipse)
+        let klipse = 'https://storage.googleapis.com/app.klipse.tech/plugin_prod/js/klipse_plugin.min.js';
+
+        if (document.querySelectorAll('[src="' + klipse + '"]').length > 0) {
             window.klipse.plugin.init(window.klipse_settings)
+        } else {
+            let script = document.createElement('script');
+            script.setAttribute('src', klipse);
+            document.getElementsByTagName('head')[0].appendChild(script);
+            script.setAttribute('defer', '');
+        }
     })
+
+
 </script>
 
 <slot></slot>
