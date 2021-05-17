@@ -42,9 +42,7 @@
 	import { onMount } from 'svelte';
 
     let mountParams;
-
     onMount(() => {
-        console.log(($page)?.query.get('search'), window.location.search);
         if (window.location.search) mountParams = new URLSearchParams(window.location.search); 
     });
 
