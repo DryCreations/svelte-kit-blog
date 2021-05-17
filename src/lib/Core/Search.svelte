@@ -19,8 +19,7 @@ import { goto } from "$app/navigation";
     }
 </script>
 
-<div class="flex flex-row-reverse items-center ">
-    <label>
+    <label class="flex flex-row-reverse items-center ">
     <input bind:this={textBox} bind:value={search} on:keydown={redirect} class="ml-5 outline-none dark:text-gray-400 text-gray-500 dark:focus:text-white focus:text-gray-900 bg-transparent w-0 focus:w-32 border-b-2 dark:focus:border-white focus:border-gray-900 dark:border-gray-400 border-gray-500" >
 
     <button on:click={focusOnSearch} class="">
@@ -30,7 +29,7 @@ import { goto } from "$app/navigation";
         </svg>
     </button>
     </label>
-</div>
+
 
 <style>
     input:focus + button {
