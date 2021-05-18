@@ -1,6 +1,5 @@
 <script context="module">
     import { base } from '$app/paths';
-    export const prerender = true;
 
     export async function load ( { fetch, page: {query, params} } ) {
         let pageNum = 0;
@@ -15,7 +14,7 @@
             }
         }
 
-        const res = await fetch('/api/posts');
+        const res = await fetch(`${base}/api/posts`);
     
         if (res.ok) return {
             props: {
