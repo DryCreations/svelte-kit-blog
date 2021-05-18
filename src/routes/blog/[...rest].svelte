@@ -1,5 +1,6 @@
 <script context="module">
     import { base } from '$app/paths';
+    export const prerender = true;
 
     export async function load ( { fetch, page: {query, params} } ) {
         let pageNum = 0;
