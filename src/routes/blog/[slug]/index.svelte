@@ -43,7 +43,7 @@ import { base } from '$app/paths';
     <meta name="description" content={metadata.description} />
 </svelte:head>
 
-<article class="max-w-prose w-full text mx-auto text-base p-16 pb-24"> 
+<article class="max-w-prose w-full text mx-auto text-base pt-16 pb-24"> 
     <Post />
 </article>
 
