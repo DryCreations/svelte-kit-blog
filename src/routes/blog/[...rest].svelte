@@ -14,7 +14,7 @@
             }
         }
 
-        const res = await fetch(`${base}/api/posts`);
+        const res = await fetch(`${base}/api/posts.json`);
     
         if (res.ok) return {
             props: {

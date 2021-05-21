@@ -1,15 +1,28 @@
 <script context="module">
     export async function load ({ page }) {
         try {
-            let {metadata, default: Component} = await import(/* @vite ignore */ `./../../../posts/${page.params.slug}/index.svelte.md`)
-            return {
-                props: {
-                    post: {
-                        metadata,
-                        Component
+            if (import.meta.env.SSR && import.meta.env.DEV) {
+                let {metadata, default: Component} = await import(/* @vite ignore */ `./../../src/posts/${page.params.slug}/index.svelte.md`)
+                return {
+                    props: {
+                        post: {
+                            metadata,
+                            Component
+                        }
+                    }
+                }
+            } else {
+                let {metadata, default: Component} = await import(/* @vite ignore */ `./../../../posts/${page.params.slug}/index.svelte.md`)
+                return {
+                    props: {
+                        post: {
+                            metadata,
+                            Component
+                        }
                     }
                 }
             }
+            
         } catch {
             return;
         }
